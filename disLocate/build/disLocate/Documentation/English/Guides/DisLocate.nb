@@ -1,0 +1,272 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11062,        262]
+NotebookOptionsPosition[      7863,        198]
+NotebookOutlinePosition[     10372,        251]
+CellTagsIndexPosition[     10329,        248]
+WindowTitle->disLocate
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell["DIS LOCATE GUIDE", "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "37b9795b-3bca-4200-a61f-8b5417fe6ea5"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "944cd67f-52ef-4b9d-82f4-3a72ca40a251"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "e88387e1-d824-41ae-b034-04390fc9c1a7"]
+         }],ExpressionUUID->"f8567e7f-d93e-48cb-a55f-3400ee710b95"],
+         StripOnInput->False], {"\<\"PlotPairCorrelationFunction\"\>":>
+        Documentation`HelpLookup[
+        "paclet:disLocate/ref/PlotPairCorrelationFunction"], \
+"\<\"PlotVoronoiTessellations\"\>":>Documentation`HelpLookup[
+        "paclet:disLocate/ref/PlotVoronoiTessellations"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "705a7002-34e6-43cc-9be2-e6351ab0f3f6"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "c162da4c-fd8b-4441-82b6-603821a13860"]
+         }],ExpressionUUID->"e21f7501-6876-4f30-acfe-912dfdaa82e1"],
+         StripOnInput->False], {"\<\"disLocate/guide/DisLocate\"\>":>
+        None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell["disLocate/guide/DisLocate"]}, Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        Delimiter, "\<\"Copy web URL\"\>":>
+        Module[{DocumentationSearch`Private`nb$}, 
+         DocumentationSearch`Private`nb$ = NotebookPut[
+            Notebook[{
+              Cell[
+               BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                 "http://reference.wolfram.com/language/disLocate/guide/\
+DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+              Visible -> False]]; 
+         SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+         FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+         NotebookClose[DocumentationSearch`Private`nb$]; 
+         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$177854], 
+               "http://reference.wolfram.com/system-modeler/", 
+               "http://reference.wolfram.com/language/"] <> 
+             "disLocate/guide/DisLocate" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "17de1a3a-a99e-41b8-9127-c8923c6206d4"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "856e1fb3-ba82-403a-b5bc-a2a344028807"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"f879e53b-ca8b-40e6-b20a-f819e699b183"],
+
+Cell[CellGroupData[{
+
+Cell["disLocate", "GuideTitle",
+ CellID->204292035,ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25"],
+
+Cell[TextData[{
+ "Here we introduce our numerical Mathematica package disLocate, a suite of \
+tools to rapidly quantify the spatial structure of a two-dimensional \
+dispersion of objects. The full range of tools available in disLocate give \
+different insights into the quality and type of order present in a given \
+dispersion, accessing the translational, orientational and entropic order. \
+The utility of this package allows for researchers to extract the variation \
+and confidence range within finite sets of data (single images) using \
+different structure metrics to quantify local variation in disorder. \
+Containing all metrics within one package allows for researchers to easily \
+and rapidly extract many different parameters simultaneously, allowing robust \
+conclusions to be drawn on the order of a given system. Quantifying the \
+experimental trends which produce desired morphologies enables engineering of \
+novel methods to direct self-assembly (",
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["Bumstead et al., 2017"]], 
+    "https://www.nature.com/articles/s41598-017-18894-7"},
+   "WebLink",
+   BaseStyle->{"GuideAbstract"}]],ExpressionUUID->
+  "acc838db-b5dc-4043-b29a-c235f872f125"],
+ ").\n\nTurak Lab"
+}], "GuideAbstract",
+ CellID->129513766,ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"98943753-23ca-4e2c-b373-cb411bd58c1c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PlotPairCorrelationFunction"]], 
+    "paclet:disLocate/ref/PlotPairCorrelationFunction", 
+    "disLocate Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "f15d63de-a3bd-4868-8fd6-a44da1bd6907"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Plots a pair correlation function of one or multiple sets of 2d points"
+}], "GuideText",
+ CellID->300640212,ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PlotVoronoiTessellations"]], 
+    "paclet:disLocate/ref/PlotVoronoiTessellations", 
+    "disLocate Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+  "c6d0de5e-82ef-4b17-9de8-65e69df8f91b"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Creates a voronoi tessellation graphic of a set of 2d points, colour-coded \
+according to some analysis parameter. "
+}], "GuideText",
+ CellID->41181813,ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"0357c192-9199-494f-ab6c-6365e8374364"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900., 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"disLocate",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 23, 9, 9, 56.4025925}", 
+    "history" -> {"??", "", "", ""}, "context" -> "disLocate`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "dis Locate Guide", "language" -> "en", "paclet" -> "disLocate", "status" -> 
+    "None", "summary" -> 
+    "Here we introduce our numerical Mathematica package disLocate, a suite \
+of tools to rapidly quantify the spatial structure of a two-dimensional \
+dispersion of objects. The full range of tools available in disLocate give \
+different insights into the quality and type of order present in a given \
+dispersion, accessing the translational, orientational and entropic order. \
+The utility of this package allows for researchers to extract the variation \
+and confidence range within finite sets of data (single images) using \
+different structure metrics to quantify local variation in disorder. \
+Containing all metrics within one package allows for researchers to easily \
+and rapidly extract many different parameters simultaneously, allowing robust \
+conclusions to be drawn on the order of a given system. Quantifying the \
+experimental trends which produce desired morphologies enables engineering of \
+novel methods to direct self-assembly (Bumstead et al., 2017). Turak Lab", 
+    "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$177816, "title" -> 
+    "disLocate", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "disLocate", "type" -> "Guide", "uri" -> 
+    "disLocate/guide/DisLocate"}},
+CacheGraphics->False,
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"6889c4db-6e57-4661-afa3-c90190233a94"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 4489, 106, 70, "AnchorBarGrid",ExpressionUUID->"f879e53b-ca8b-40e6-b20a-f819e699b183",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5095, 131, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
+ CellID->204292035],
+Cell[5204, 134, 1332, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
+ CellID->129513766],
+Cell[6539, 160, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"98943753-23ca-4e2c-b373-cb411bd58c1c"],
+Cell[6635, 162, 545, 14, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
+ CellID->300640212],
+Cell[7183, 178, 583, 15, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
+ CellID->41181813]
+}, Open  ]],
+Cell[7781, 196, 78, 0, 70, "FooterCell",ExpressionUUID->"0357c192-9199-494f-ab6c-6365e8374364"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
