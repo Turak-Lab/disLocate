@@ -5,7 +5,7 @@ BeginPackage["disLocate`"]
 (* Step 1. - Merge All Cells Toghether *)
 (* Step 2. - Convert To Initialization Cell *)
 (* Step 3. - Save as .M *)
-disLocateVersion:="8.2023-06-12."<>ToString["thesis-M.V8"];
+disLocateVersion:="9.2023-06-29."<>ToString["thesis-M.V9"];
 If[$VersionNumber<10,Needs["ComputationalGeometry`"];];
 
 (* Global Definiations of Colour Schemes *)
@@ -178,6 +178,7 @@ RegularPolygonColourScheme:=
 
 
 SetAttributes[PlotPairCorrelationFunction,HoldFirst];
+SetAttributes[PlotVoronoiTessellations,HoldFirst];
 
 (* Usages of disLocate Private Functions *)
 
@@ -464,6 +465,21 @@ vorColourer::usage="vorColourer[colNum, OptionsPattern[] ] "
 binGen::usage="Does Even less"
 
 Begin["`Private`"]
+
+
+compilerCheckerLongNameVeryConfusing123Variable = False;
+Quiet@Check[Compile[{{secretTinyLilvar}},1,CompilationTarget->"C" ]; compilerCheckerLongNameVeryConfusing123Variable = False;, compilerCheckerLongNameVeryConfusing123Variable=True;];
+
+Off[Compile::nogen];
+Off[CCompilerDriver`CreateLibrary::nocomp]
+
+If[compilerCheckerLongNameVeryConfusing123Variable == True,Print@"No C compiler has been found. Certain functions will be compiled in Wolfram instead. (No action required).";,Print@"Your C compiler has been succesfully located and will be used to decrease runtime of certain functions.";];
+Clear[compilerCheckerLongNameVeryConfusing123Variable];
+
+
+
+
+
 
 
 Options[vorColourer]= {colourGrad->{purpleBlend,greenBlend}, bind->True, binDstr->Table[i/10,{i,11}]  };
@@ -1087,14 +1103,14 @@ pcell[pinV_, cellinV_]:= Block[ {al},
 coordFromPolygon[fullVert_List,polyl_List] := Table[ fullVert[[z]], {z, polyl}]
 
 
-Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True};
-SetOptions[PlotPairCorrelationFunction,box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True];
+Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True, save ->False};
+SetOptions[PlotPairCorrelationFunction,box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True, save->False];
 PlotPairCorrelationFunction[inData2d_, OptionsPattern[]]:=
 Block[{
 xyDataList,xyData,xyLattice,r,dr,xyDataDisplaced,xyLatticeDisplaced,pcfData,pcfLattice,hexBox,
 paddingA,paddingB,bstyle,normalizedRef, normalizedFunc, rmsMetric,differenceOfBoth,inRef,inFunc,maxDelta,minDelta,errorGrid,
 nfuncts,gridLines,latticePeaks,colouring,grswLg,polys,lmsize,fullData,fullNames,diffRMSmetrics,diffLists,interpFullDataN,tempDelta,maxR,difPlots,stackedPlots,Func,funcNameList,returnedPlot,
-ref,refName,func,
+ref,refName,func,multDatType,
 rmsList,
 pcfDataList,pcfLatticeList,pcfResidualList,pcfFirstPeakList,
 xMaxSaved,dataExpectedDiameterList,
@@ -1112,7 +1128,8 @@ bootsO=OptionValue[boots],
 latticeO=OptionValue[lattice],
 absgrO=OptionValue[absgr],
 colourO=OptionValue[colours],
-varNamesO = OptionValue[varNames]
+varNamesO = OptionValue[varNames],
+saveO = OptionValue[save]
 },
 xMaxSaved=Infinity;
 
@@ -1123,25 +1140,30 @@ optionNamesO:= {boxO,boundaryO,latticeO,shellsO,distanceO};
 
 
 Off[TensorRank::rect];
-
+multDatType=True;
 (*  Autodetect if more than one dataset is input *)
-If[TensorRank[inData2d]==2,xyDataList={inData2d};, xyDataList=inData2d;];
+If[TensorRank[inData2d]==2,xyDataList={inData2d}; multDatType=False;, xyDataList=inData2d; multDatType=True;];
 
 On[TensorRank::rect]; 
 
 
 nfuncts= Length[xyDataList];
 
-If[namesO==={}, If[ varNamesO == False, namesO=Table["Data: "<>ToString[x],{x,nfuncts}]; , 
-
-If[ Length@Trace@inData2d==2, namesO = {(Trace@inData2d)[[1]]}   , namesO = (Trace@inData2d)[[All,1]][[1;; Length[Trace@inData2d]  -1 ]]     ];  If[varNamesO == True, namesO = Table[ ToString[namesO[[pp]]], {pp, Length@namesO}]];];,
 
 
+If[namesO==={}, If[ varNamesO == False , namesO=Table["Data: "<>ToString[x],{x,nfuncts}]; , 
 
+
+If[ Length@((Trace@inData2d)[[1]])==2, namesO = (Trace@inData2d)[[All,1]][[1;; Length[Trace@inData2d]  -1 ]]     ]; ];
+
+
+If[Length@((Trace@inData2d)[[1]])==1, namesO = Table[ ToString@((Trace@inData2d)[[1]]) <> ToString@pp, {pp, nfuncts}    ]];
+
+
+If[varNamesO == True, namesO = Table[ ToString[namesO[[pp]]], {pp, Length@namesO}]];
 Which[Length[namesO]==0,namesO={namesO};,Length[namesO]<  nfuncts , Print["Number of Names NOT EQUAL to Number of Data Sets!"];
 ];
 ];
-
 
 
 (* Initialize Arrays for PCFs  *)
@@ -1164,6 +1186,8 @@ boxO=AutoBoxTransform[xyData];
 hexBox= (Sqrt[PolyArea[boxO]]) closedBindingBox ; 
 ,
 hexBox= (Sqrt[PolyArea[boxO]]) closedBindingBox ; ];
+
+
 If[bootsO<0 ,bootsO=Abs[bootsO];];
 
 
@@ -1480,6 +1504,12 @@ If[OptionValue[chartQ], AppendTo[outCol,TableForm[
 Transpose@{ pcfFirstPeakList    , dataExpectedDiameterList[[;;,1]], dataExpectedDiameterList[[;;,2]], npointsDataList,npointsLatticeList  }
 ,TableHeadings->{namesO,{ "First Peak\ng(r)","Expected Spacing\n("<>ToString[latticeO]<>" Lattice)","Expected Disorder\n("<>ToString[latticeO]<>" Lattice)", "Particles\n(data)","Particles\n(lattice)"}}]    ]   ] ;
 
+If[saveO==True,
+If[stackedO==True,Export[NotebookDirectory[]<>namesO[[1]]<>"_Resid"<>".png",difPlots]; Export[NotebookDirectory[]<>namesO[[1]]<>"_CorrelationFunctionPlot.png", stackedPlots];  ];
+If[stackedO==False, Do[Export[NotebookDirectory[]<>namesO[[zz]]<>"_CorrelationFunction"<>ToString[zz]<>".png", returnedPlot[[zz]]],{zz,Length@returnedPlot}]]
+];
+
+
 Return[Column[outCol,Spacings->{0,3}  ] ];
 
 ];
@@ -1772,20 +1802,21 @@ If[debugO===True,Print["Final Return Voronoi"];];
 If[fullO=== True,{return  ,pbcData ,delaunayNearestNeighbours,commonVertex},return]
 
 ];
-Options[\!\(TraditionalForm\`PlotVoronoiTessellations\)]= {type->"bop",symmetry->6,cells->{},typedata-> Null ,points->True,scalebar->False, stats->"Count", boundary->"NOEDGE",box->{} ,raster-> False,binsize->0.1, colourBinned->True, colourGrad->{purpleBlend,greenBlend}};
-SetOptions[PlotVoronoiTessellations,type->"bop",symmetry->6,cells->{},typedata-> Null ,points->True,scalebar->False, stats->"Count", boundary->"NOEDGE",box->{},raster->False,binsize->0.1,colourBinned->True,colourGrad->{purpleBlend,greenBlend} ];
+Options[\!\(TraditionalForm\`PlotVoronoiTessellations\)]= {type->"bop",symmetry->6,cells->{},typedata-> Null ,points->True,scalebar->False, stats->"Count", boundary->"NOEDGE",box->{} ,raster-> False,binsize->0.1, colourBinned->True, colourGrad->{purpleBlend,greenBlend}, save->False};
+SetOptions[PlotVoronoiTessellations,type->"bop",symmetry->6,cells->{},typedata-> Null ,points->True,scalebar->False, stats->"Count", boundary->"NOEDGE",box->{},raster->False,binsize->0.1,colourBinned->True,colourGrad->{purpleBlend,greenBlend}, save->False ];
 PlotVoronoiTessellations[data2Din_, OptionsPattern[] ]:=Block[
-{data2D,npoints,vor,hexagonalSpacing,nnDist,hexagonalVoronoi,colourBins,voronoiColour,polygonColour,polyAreaColourTable,returnVor,xmin,ymin, xmax,ymax,intensity,\[CapitalDelta],histstats,histtype,sym,bopdata,boptrue=False,scalebargraphic,r,\[Theta],r\[Theta],vorCenters,nvor,m,renderVor,extraGraphics,l2d,dupecheck,
+{data2D,npoints,vor,hexagonalSpacing,nnDist,hexagonalVoronoi,colourBins,voronoiColour,polygonColour,polyAreaColourTable,returnVor,xmin,ymin, xmax,ymax,intensity,\[CapitalDelta],histstats,histtype,sym,bopdata,boptrue=False,scalebargraphic,r,\[Theta],r\[Theta],vorCenters,nvor,m,renderVor,extraGraphics,l2d,dupecheck,savenames,
 typeO=OptionValue[type],
 symmetryO=OptionValue[symmetry],
-cellsO=OptionValue[cells],
-typedataO=OptionValue[typedata],
+cellsO=OptionValue[cells], (*Never used*)
+typedataO=OptionValue[typedata], (*Never used*)
 pointsO=OptionValue[points],
 scalebarO=OptionValue[scalebar],
 statsO=OptionValue[stats],
 boundaryO= OptionValue[boundary],
 boxO=OptionValue[box],
-rasterO=OptionValue[raster]
+rasterO=OptionValue[raster],
+saveO = OptionValue[save]
 },
 
 
@@ -1954,6 +1985,15 @@ If[scalebarO==True,
 returnVor[[1]]= Labeled[returnVor[[1]],scalebargraphic,Right]
 (*AppendTo[returnVor,scalebargraphic]; *)];
 
+If[saveO == True,
+savenames = ToString@((Trace@data2Din)[[1]]);
+
+If[Length@returnVor==3,  savenames = { savenames<>"VoronoiTessellation", savenames<>"Tessellation Scalebar", savenames<>"Histogram"     } ];
+If[Length@returnVor==2,  savenames = { savenames<>"VoronoiTessellation", savenames<>"Histogram"     } ];
+If[Length@returnVor==1, savenames = {savenames<>"VoronoiTessellation"}];
+Do[ Export[NotebookDirectory[]<>savenames[[zz]]<>".png", returnVor[[zz]]],{zz,Length@returnVor}];
+
+];
 
 (* Final Return of VoronoiTessellation + Histogram  *)
 If[rasterO==True,returnVor=Rasterize/@returnVor];

@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "63494458c8e734b70a6e42e469ba372cd974efa7d1fc1d7b3abd75a01b12a2de"
+            "3fb8e1538b589d668c9430912b809267694ad7906bedd8bc668a3a180912dd54"
                 
         |>
         ,
@@ -24,7 +24,7 @@
             ,
             "Hash"
             ->
-            "3024e0c281dea3954c850e6bd567ab8812dec0c4b235951795ad4c681183e462"
+            "305f628478f67b45f5d83b91253bd3c301ff2b105a1f6d3f7915b48efab70905"
                 
         |>
         ,
@@ -38,7 +38,7 @@
             ,
             "Hash"
             ->
-            "14b3203910713433a880229c4cf5a9f9feb14f72b8fc15d565cb64a892327d1e"
+            "4d54fe09642953223223ead138e2b0ea9ac276d9d0781f9329d099d79eb8e90b"
                 
         |>
         ,
@@ -52,7 +52,21 @@
             ,
             "Hash"
             ->
-            "52466ee4ca5f8c29e14d4377567156892eb268ae3de58751681b429d8343b739"
+            "230814dcea81c1e95e68eecf0521acdeaf82c2f130997049747da10bee3e57f2"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\Tutorials\\SolutionToVoronoiTessellationPractice.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "f78fb4a9ad979f6d6171603514c26b247f2d63d70b798c8bd26beefd97a2df26"
                 
         |>
     }

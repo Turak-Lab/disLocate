@@ -362,6 +362,21 @@
 		"BulkRetrievalOptimized" -> False
 	|>,
 	<|
+		"Name" -> "Keywords",
+		"Type" -> "Text",
+		"Stored" -> True,
+		"Tokenized" -> True,
+		"Weight" -> 1,
+		"Searchable" -> True,
+		"Language" -> "English",
+		"IgnoreCase" -> True,
+		"StemmingMethod" -> Automatic,
+		"CamelCaseMatching" -> True,
+		"DeleteStopWords" -> True,
+		"StoreTermVectors" -> False,
+		"BulkRetrievalOptimized" -> False
+	|>,
+	<|
 		"Name" -> "Abstract",
 		"Type" -> "Text",
 		"Weight" -> 1.5,
@@ -378,6 +393,21 @@
 	|>,
 	<|
 		"Name" -> "LinkedSymbols",
+		"Type" -> "Text",
+		"Tokenized" -> True,
+		"Stored" -> False,
+		"Weight" -> 1,
+		"Searchable" -> True,
+		"Language" -> "English",
+		"IgnoreCase" -> True,
+		"StemmingMethod" -> Automatic,
+		"CamelCaseMatching" -> True,
+		"DeleteStopWords" -> True,
+		"StoreTermVectors" -> False,
+		"BulkRetrievalOptimized" -> False
+	|>,
+	<|
+		"Name" -> "Caption",
 		"Type" -> "Text",
 		"Tokenized" -> True,
 		"Stored" -> False,

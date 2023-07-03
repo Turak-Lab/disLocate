@@ -3,8 +3,8 @@
 PacletObject[
     <|
         "Name" -> "disLocate",
-        "Version" -> "0.0.1",
-        "WolframVersion" -> "13.+",
+        "Version" -> "0.0.2",
+        "WolframVersion" -> "12.+",
         "Extensions" ->
             {
                 {

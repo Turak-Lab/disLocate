@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11062,        262]
-NotebookOptionsPosition[      7863,        198]
-NotebookOutlinePosition[     10372,        251]
-CellTagsIndexPosition[     10329,        248]
+NotebookDataLength[     11061,        262]
+NotebookOptionsPosition[      7862,        198]
+NotebookOutlinePosition[     10371,        251]
+CellTagsIndexPosition[     10328,        248]
 WindowTitle->disLocate
 WindowFrame->Normal*)
 
@@ -27,11 +27,11 @@ Cell[BoxData[GridBox[{
           TemplateBox[{12},
            "Spacer1"], Cell["DIS LOCATE GUIDE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "37b9795b-3bca-4200-a61f-8b5417fe6ea5"], 
+           "9c55e68c-d7e0-4c83-8df6-47df42d281a4"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "944cd67f-52ef-4b9d-82f4-3a72ca40a251"],
+         "fd5db3ef-4267-4fbd-b1ca-e8cc607be3ee"],
         Background->RGBColor[0.85098, 0.396078, 0],
         ItemSize->Full], ""}
      },
@@ -51,8 +51,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "e88387e1-d824-41ae-b034-04390fc9c1a7"]
-         }],ExpressionUUID->"f8567e7f-d93e-48cb-a55f-3400ee710b95"],
+           "0d96be61-30c8-4fba-8c59-32fb0f3b3175"]
+         }],ExpressionUUID->"48b0db7b-f7f6-43b0-96b8-4d9a55be4e56"],
          StripOnInput->False], {"\<\"PlotPairCorrelationFunction\"\>":>
         Documentation`HelpLookup[
         "paclet:disLocate/ref/PlotPairCorrelationFunction"], \
@@ -63,7 +63,7 @@ Cell[BoxData[GridBox[{
         MenuStyle->"GuideFunction"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "705a7002-34e6-43cc-9be2-e6351ab0f3f6"],
+      "1fe1937e-0a47-4162-89a6-989cd7f69ff5"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -79,8 +79,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "c162da4c-fd8b-4441-82b6-603821a13860"]
-         }],ExpressionUUID->"e21f7501-6876-4f30-acfe-912dfdaa82e1"],
+           "8b0db01b-af9b-497b-8437-592804bd0d70"]
+         }],ExpressionUUID->"b7179d5f-a7a0-4b61-8024-3ff844a5279b"],
          StripOnInput->False], {"\<\"disLocate/guide/DisLocate\"\>":>
         None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
         Module[{DocumentationSearch`Private`nb$}, 
@@ -107,7 +107,7 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[If[
-               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$177854], 
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$86046], 
                "http://reference.wolfram.com/system-modeler/", 
                "http://reference.wolfram.com/language/"] <> 
              "disLocate/guide/DisLocate" <> ".html"], None}]}]},
@@ -116,16 +116,16 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "17de1a3a-a99e-41b8-9127-c8923c6206d4"]
+      "be868f8d-951b-49d8-8a6f-02dc1cded4e2"]
     }], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "856e1fb3-ba82-403a-b5bc-a2a344028807"]}
+     "4d11b329-0b4d-4488-9807-0fcf4368fb9e"]}
   }]], "AnchorBarGrid",
  GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
      Scaled[0.65], {
       Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
    "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"f879e53b-ca8b-40e6-b20a-f819e699b183"],
+ CellID->1,ExpressionUUID->"893eb42c-cf22-4ae5-a561-76b351c82ad8"],
 
 Cell[CellGroupData[{
 
@@ -153,12 +153,12 @@ novel methods to direct self-assembly (",
     "https://www.nature.com/articles/s41598-017-18894-7"},
    "WebLink",
    BaseStyle->{"GuideAbstract"}]],ExpressionUUID->
-  "acc838db-b5dc-4043-b29a-c235f872f125"],
+  "c7daa6e9-be5c-47d6-9a9c-4f06de96f92c"],
  ").\n\nTurak Lab"
 }], "GuideAbstract",
  CellID->129513766,ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a"],
 
-Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"98943753-23ca-4e2c-b373-cb411bd58c1c"],
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"fdc883d7-8f7b-4b67-9784-7f4dae3572d8"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -194,7 +194,7 @@ according to some analysis parameter. "
  CellID->41181813,ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8"]
 }, Open  ]],
 
-Cell[" ", "FooterCell",ExpressionUUID->"0357c192-9199-494f-ab6c-6365e8374364"]
+Cell[" ", "FooterCell",ExpressionUUID->"dee4b764-8dcc-40b7-bbad-1c3498d6f8b1"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -209,7 +209,7 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 6, 23, 9, 9, 56.4025925}", 
+   "built" -> "{2023, 7, 3, 12, 16, 46.4723004}", 
     "history" -> {"??", "", "", ""}, "context" -> "disLocate`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -229,7 +229,7 @@ conclusions to be drawn on the order of a given system. Quantifying the \
 experimental trends which produce desired morphologies enables engineering of \
 novel methods to direct self-assembly (Bumstead et al., 2017). Turak Lab", 
     "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$177816, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$86015, "title" -> 
     "disLocate", "titlemodifier" -> "", "metadescription" -> "", 
     "windowtitle" -> "disLocate", "type" -> "Guide", "uri" -> 
     "disLocate/guide/DisLocate"}},
@@ -237,7 +237,7 @@ CacheGraphics->False,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"6889c4db-6e57-4661-afa3-c90190233a94"
+ExpressionUUID->"ceeffd84-06e8-45ae-9408-da45787e803c"
 ]
 (* End of Notebook Content *)
 
@@ -250,20 +250,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[581, 21, 4489, 106, 70, "AnchorBarGrid",ExpressionUUID->"f879e53b-ca8b-40e6-b20a-f819e699b183",
+Cell[581, 21, 4488, 106, 70, "AnchorBarGrid",ExpressionUUID->"893eb42c-cf22-4ae5-a561-76b351c82ad8",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5095, 131, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
+Cell[5094, 131, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
  CellID->204292035],
-Cell[5204, 134, 1332, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
+Cell[5203, 134, 1332, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
  CellID->129513766],
-Cell[6539, 160, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"98943753-23ca-4e2c-b373-cb411bd58c1c"],
-Cell[6635, 162, 545, 14, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
+Cell[6538, 160, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"fdc883d7-8f7b-4b67-9784-7f4dae3572d8"],
+Cell[6634, 162, 545, 14, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
  CellID->300640212],
-Cell[7183, 178, 583, 15, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
+Cell[7182, 178, 583, 15, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
  CellID->41181813]
 }, Open  ]],
-Cell[7781, 196, 78, 0, 70, "FooterCell",ExpressionUUID->"0357c192-9199-494f-ab6c-6365e8374364"]
+Cell[7780, 196, 78, 0, 70, "FooterCell",ExpressionUUID->"dee4b764-8dcc-40b7-bbad-1c3498d6f8b1"]
 }
 ]
 *)
