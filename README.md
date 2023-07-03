@@ -1,6 +1,6 @@
  # disLocate  - (d)etecting (i)ntermolecular (s)tructure (Locate)d at particle positions
 
-A mathematica package for analysing the spatial arrangement of nano-particle arrays (2 dimensional points). 
+A Mathematica package for analysing the spatial arrangement of nano-particle arrays (2 dimensional points). 
 
 Provided by Turak Lab
 
@@ -26,3 +26,6 @@ Needs["disLocate`"]
 - If you have not used Mathematica before, you can read our the 0.Basics of Mathematica file in /Tutorials. 
 - Once installed, you can access the documentation files in the Wolfram Documentation centre, by searching "disLocate".
 - The ``/Example`` folder contains a sample analysis of two datasets. Simply download the entire folder and open the "Analysis.nb" file.
+## About Us
+  
+The Turak Functional Nanomaterials Research Group at Concordia University (Physics, Centre for NanoScience Research) aims to develop easy, versatile, and inexpensive methods of producing, tuning and exploring nanostructures, targeting energy applications, sensing and magneto-optics. By making cheaper, more accessible, and more flexible products, our research makes an impact on how people use clean energy, access information and measure the world around them.
