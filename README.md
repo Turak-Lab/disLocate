@@ -1,6 +1,8 @@
- # disLocate
+ # disLocate  - (d)etecting (i)ntermolecular (s)tructure (Locate)d at particle positions
+
 A mathematica package for analysing the spatial arrangement of nano-particle arrays (2 dimensional points). 
 
+Provided by Turak Lab
 
 ## Installation
  - **For Mathematica 12.1 and above** [download](https://github.com/MstislavKeldysh/disLocate/tree/main) the latest version of the .paclet file and save it in some known directory.
