@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11061,        262]
-NotebookOptionsPosition[      7862,        198]
-NotebookOutlinePosition[     10371,        251]
-CellTagsIndexPosition[     10328,        248]
+NotebookDataLength[     15455,        377]
+NotebookOptionsPosition[     11841,        307]
+NotebookOutlinePosition[     14275,        359]
+CellTagsIndexPosition[     14232,        356]
 WindowTitle->disLocate
 WindowFrame->Normal*)
 
@@ -27,11 +27,11 @@ Cell[BoxData[GridBox[{
           TemplateBox[{12},
            "Spacer1"], Cell["DIS LOCATE GUIDE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "9c55e68c-d7e0-4c83-8df6-47df42d281a4"], 
+           "27ca46b6-2174-4577-b432-76bed1ec4f5a"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "fd5db3ef-4267-4fbd-b1ca-e8cc607be3ee"],
+         "3daabd53-b651-4413-b462-b417fa878913"],
         Background->RGBColor[0.85098, 0.396078, 0],
         ItemSize->Full], ""}
      },
@@ -51,10 +51,12 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "0d96be61-30c8-4fba-8c59-32fb0f3b3175"]
-         }],ExpressionUUID->"48b0db7b-f7f6-43b0-96b8-4d9a55be4e56"],
-         StripOnInput->False], {"\<\"PlotPairCorrelationFunction\"\>":>
+           "41703e37-bd44-4d3e-bfa3-a7a55a172795"]
+         }],ExpressionUUID->"b2fdaaf0-1eee-4265-97ed-7e2dda27f561"],
+         StripOnInput->False], {"\<\"CoordinationNeighbourCloud\"\>":>
         Documentation`HelpLookup[
+        "paclet:disLocate/ref/CoordinationNeighbourCloud"], \
+"\<\"PlotPairCorrelationFunction\"\>":>Documentation`HelpLookup[
         "paclet:disLocate/ref/PlotPairCorrelationFunction"], \
 "\<\"PlotVoronoiTessellations\"\>":>Documentation`HelpLookup[
         "paclet:disLocate/ref/PlotVoronoiTessellations"]},
@@ -63,7 +65,7 @@ Cell[BoxData[GridBox[{
         MenuStyle->"GuideFunction"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "1fe1937e-0a47-4162-89a6-989cd7f69ff5"],
+      "857fb215-e9cd-4fc4-977f-be48feae7d20"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -79,8 +81,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "8b0db01b-af9b-497b-8437-592804bd0d70"]
-         }],ExpressionUUID->"b7179d5f-a7a0-4b61-8024-3ff844a5279b"],
+           "f1b8dec6-a370-4226-aae4-4d4b1bf87fc8"]
+         }],ExpressionUUID->"1d91fe97-99bc-45e4-84a0-6d758df6c2f5"],
          StripOnInput->False], {"\<\"disLocate/guide/DisLocate\"\>":>
         None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
         Module[{DocumentationSearch`Private`nb$}, 
@@ -107,7 +109,7 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[If[
-               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$86046], 
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7332], 
                "http://reference.wolfram.com/system-modeler/", 
                "http://reference.wolfram.com/language/"] <> 
              "disLocate/guide/DisLocate" <> ".html"], None}]}]},
@@ -116,16 +118,16 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "be868f8d-951b-49d8-8a6f-02dc1cded4e2"]
+      "72118fed-1228-4952-af7e-32db551e0cf6"]
     }], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "4d11b329-0b4d-4488-9807-0fcf4368fb9e"]}
+     "6a21520d-e10a-4a92-b30b-673ef978e1fa"]}
   }]], "AnchorBarGrid",
  GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
      Scaled[0.65], {
       Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
    "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"893eb42c-cf22-4ae5-a561-76b351c82ad8"],
+ CellID->1,ExpressionUUID->"278120f1-584e-41ba-a53f-95079f686390"],
 
 Cell[CellGroupData[{
 
@@ -133,19 +135,19 @@ Cell["disLocate", "GuideTitle",
  CellID->204292035,ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25"],
 
 Cell[TextData[{
- "Here we introduce our numerical Mathematica package disLocate, a suite of \
-tools to rapidly quantify the spatial structure of a two-dimensional \
-dispersion of objects. The full range of tools available in disLocate give \
-different insights into the quality and type of order present in a given \
-dispersion, accessing the translational, orientational and entropic order. \
-The utility of this package allows for researchers to extract the variation \
-and confidence range within finite sets of data (single images) using \
-different structure metrics to quantify local variation in disorder. \
-Containing all metrics within one package allows for researchers to easily \
-and rapidly extract many different parameters simultaneously, allowing robust \
-conclusions to be drawn on the order of a given system. Quantifying the \
-experimental trends which produce desired morphologies enables engineering of \
-novel methods to direct self-assembly (",
+ "disLocate is a Mathematica package that calculates various translational, \
+entropic and angular order metrics and parameters from a list of particle \
+centroid positions. These are displayed in various configurations to give \
+access to the  spatial statistical characteristics of 2D arrays of objects.\n\
+See M. Bumstead, K. Liang, G. Hanta, L.S. Hui, and A. Turak, \
+\[OpenCurlyDoubleQuote]disLocate: tools to rapidly quantify local \
+intermolecular structure to assess two-dimensional order in self-assembled \
+systems,\[CloseCurlyDoubleQuote] Scientific Reports 8(1), 1554 (2018).\n\n\
+Primarily used for analyzing arrays of nanoparticles from AFM and SEM images, \
+it can be easily applied to any 2D array of objects (eg. organization of \
+opals and inverse opals as photonic crystals, the distribution of \
+self-trapping filaments in polymer waveguides, the distribution of dopants \
+for OLEDs, and simulated molecules).(",
  Cell[BoxData[
   TemplateBox[{
     Cell[
@@ -153,12 +155,12 @@ novel methods to direct self-assembly (",
     "https://www.nature.com/articles/s41598-017-18894-7"},
    "WebLink",
    BaseStyle->{"GuideAbstract"}]],ExpressionUUID->
-  "c7daa6e9-be5c-47d6-9a9c-4f06de96f92c"],
+  "49ac6db5-98af-44e3-a7c9-4eb42661b6e3"],
  ").\n\nTurak Lab"
 }], "GuideAbstract",
  CellID->129513766,ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a"],
 
-Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"fdc883d7-8f7b-4b67-9784-7f4dae3572d8"],
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"7729e017-a30e-4107-8788-b2c9de5e80af"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -168,11 +170,14 @@ Cell[TextData[{
     "paclet:disLocate/ref/PlotPairCorrelationFunction", 
     "disLocate Package Symbol"},
    "PackageLink",
-   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
   "f15d63de-a3bd-4868-8fd6-a44da1bd6907"],
- " ",
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
  StyleBox["\[LongDash]", "GuideEmDash"],
- " Plots a pair correlation function of one or multiple sets of 2d points"
+ " Plots a pair correlation function (radial distribution function) of one or \
+multiple sets of 2d points"
 }], "GuideText",
  CellID->300640212,ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589"],
 
@@ -184,17 +189,121 @@ Cell[TextData[{
     "paclet:disLocate/ref/PlotVoronoiTessellations", 
     "disLocate Package Symbol"},
    "PackageLink",
-   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",ExpressionUUID->
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
   "c6d0de5e-82ef-4b17-9de8-65e69df8f91b"],
- " ",
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
  StyleBox["\[LongDash]", "GuideEmDash"],
  " Creates a voronoi tessellation graphic of a set of 2d points, colour-coded \
 according to some analysis parameter. "
 }], "GuideText",
- CellID->41181813,ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8"]
+ CellID->41181813,ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["CoordinationNeighbourCloud"]], 
+    "paclet:disLocate/ref/CoordinationNeighbourCloud", 
+    "disLocate Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "35525b58-ea17-4fcb-9f37-0bdd87b6c07c"],
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Creates a 2d probability map of the relative angular separation and radial \
+distance for only first neighbours for only the subsection of particles that \
+share a similar coordination number. "
+}], "GuideText",
+ CellID->38272560,ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0"],
+
+Cell["\t", "GuideDelimiter",
+ CellID->479694850,ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+   "\"BondOrderParameter\"", "paclet:disLocate/ref/BondOrderParameter"},
+   "HyperlinkPaclet"]],
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "e416cc71-2c97-49c9-853b-d274cdcfbfbe"],
+ StyleBox[" . ",
+  FontColor->RGBColor[0., 0., 0.6509803921568628]],
+ Cell[BoxData[
+  TemplateBox[{
+   "\"AverageFirstNeighbourDistance\"", 
+    "paclet:disLocate/ref/AverageFirstNeighbourDistance"},
+   "HyperlinkPaclet"]],
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "599ad086-6c9a-41dd-a61a-125ff2fdd77e"],
+ StyleBox[" . ",
+  FontColor->RGBColor[0., 0., 0.6509803921568628]],
+ Cell[BoxData[
+  TemplateBox[{
+   "\"ExpectedHexagonalDiameter\"", 
+    "paclet:disLocate/ref/ExpectedHexagonalDiameter"},
+   "HyperlinkPaclet"]],
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "e2b8eb92-a96e-4866-9765-fde2dea7f7a3"]
+}], "InlineGuideFunctionListing",
+ CellID->438361566,ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b"]
 }, Open  ]],
 
-Cell[" ", "FooterCell",ExpressionUUID->"dee4b764-8dcc-40b7-bbad-1c3498d6f8b1"]
+Cell[BoxData[GridBox[{
+   {
+    TemplateBox[{29},
+     "Spacer1"], GridBox[{
+      {
+       RowBox[{
+        TemplateBox[{17},
+         "Spacer1"], 
+        StyleBox[
+         RowBox[{"Related", " ", "Links"}], "GuideRelatedLinksSection"]}]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], "disLocate GitHub"}]]]], 
+            "https://github.com/Turak-Lab/disLocate"},
+           "WebLink",
+           BaseStyle->{"GuideRelatedLinks"}]],ExpressionUUID->
+          "783c5d62-a402-4c9b-a8f1-1ccbfb918443"]}]],ExpressionUUID->
+        "42d52223-0f9a-4176-87a0-a27b5f2c4a58"]], "RelatedLinks",
+        ExpressionUUID->"2fde9849-1abd-4409-b119-d31d0c02813d"]},
+      {Cell[TextData[Cell[BoxData[
+        RowBox[{
+         TemplateBox[{16},
+          "Spacer1"], "\[FilledVerySmallSquare]", Cell[BoxData[
+          TemplateBox[{
+            Cell[
+             TextData[
+              Cell[
+               TextData[{
+                 Cell[
+                  BoxData[
+                   TemplateBox[{2}, "Spacer1"]]], 
+                 "Overview Paper: disLocate"}]]]], 
+            "https://doi.org/10.1038/s41598-017-18894-7"},
+           "WebLink",
+           BaseStyle->{"GuideRelatedLinks"}]],ExpressionUUID->
+          "f5dccd0b-2a59-4720-89c3-122d462440aa"]}]],ExpressionUUID->
+        "b857a7e8-d09d-4b7c-9ce9-78fda2a77d08"]], "RelatedLinks",
+        ExpressionUUID->"30e38f91-fe67-4424-976f-c83c2846555c"]}
+     }]}
+  }]], "GuideRelatedLinksSection",ExpressionUUID->"68e7d088-cd26-42f2-b051-\
+28cb3506d93f"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"a726a6a1-5ee1-47eb-8a22-7dd79594d801"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -209,27 +318,26 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 7, 3, 12, 16, 46.4723004}", 
+   "built" -> "{2023, 7, 5, 11, 54, 57.9667383}", 
     "history" -> {"??", "", "", ""}, "context" -> "disLocate`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
     "dis Locate Guide", "language" -> "en", "paclet" -> "disLocate", "status" -> 
     "None", "summary" -> 
-    "Here we introduce our numerical Mathematica package disLocate, a suite \
-of tools to rapidly quantify the spatial structure of a two-dimensional \
-dispersion of objects. The full range of tools available in disLocate give \
-different insights into the quality and type of order present in a given \
-dispersion, accessing the translational, orientational and entropic order. \
-The utility of this package allows for researchers to extract the variation \
-and confidence range within finite sets of data (single images) using \
-different structure metrics to quantify local variation in disorder. \
-Containing all metrics within one package allows for researchers to easily \
-and rapidly extract many different parameters simultaneously, allowing robust \
-conclusions to be drawn on the order of a given system. Quantifying the \
-experimental trends which produce desired morphologies enables engineering of \
-novel methods to direct self-assembly (Bumstead et al., 2017). Turak Lab", 
-    "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$86015, "title" -> 
+    "disLocate is a Mathematica package that calculates various \
+translational, entropic and angular order metrics and parameters from a list \
+of particle centroid positions. These are displayed in various configurations \
+to give access to the spatial statistical characteristics of 2D arrays of \
+objects. See M. Bumstead, K. Liang, G. Hanta, L.S. Hui, and A. Turak, \
+'disLocate: tools to rapidly quantify local intermolecular structure to \
+assess two-dimensional order in self-assembled systems,' Scientific Reports \
+8(1), 1554 (2018). Primarily used for analyzing arrays of nanoparticles from \
+AFM and SEM images, it can be easily applied to any 2D array of objects (eg. \
+organization of opals and inverse opals as photonic crystals, the \
+distribution of self-trapping filaments in polymer waveguides, the \
+distribution of dopants for OLEDs, and simulated molecules).(Bumstead et al., \
+2017). Turak Lab", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$7296, "title" -> 
     "disLocate", "titlemodifier" -> "", "metadescription" -> "", 
     "windowtitle" -> "disLocate", "type" -> "Guide", "uri" -> 
     "disLocate/guide/DisLocate"}},
@@ -237,7 +345,7 @@ CacheGraphics->False,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"ceeffd84-06e8-45ae-9408-da45787e803c"
+ExpressionUUID->"179f6309-c001-4dfe-aff1-4e6f0021fe75"
 ]
 (* End of Notebook Content *)
 
@@ -250,20 +358,27 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[581, 21, 4488, 106, 70, "AnchorBarGrid",ExpressionUUID->"893eb42c-cf22-4ae5-a561-76b351c82ad8",
+Cell[581, 21, 4613, 108, 70, "AnchorBarGrid",ExpressionUUID->"278120f1-584e-41ba-a53f-95079f686390",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5094, 131, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
+Cell[5219, 133, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
  CellID->204292035],
-Cell[5203, 134, 1332, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
+Cell[5328, 136, 1313, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
  CellID->129513766],
-Cell[6538, 160, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"fdc883d7-8f7b-4b67-9784-7f4dae3572d8"],
-Cell[6634, 162, 545, 14, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
+Cell[6644, 162, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"7729e017-a30e-4107-8788-b2c9de5e80af"],
+Cell[6740, 164, 652, 17, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
  CellID->300640212],
-Cell[7182, 178, 583, 15, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
- CellID->41181813]
+Cell[7395, 183, 657, 17, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
+ CellID->41181813],
+Cell[8055, 202, 739, 18, 70, "GuideText",ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0",
+ CellID->38272560],
+Cell[8797, 222, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63",
+ CellID->479694850],
+Cell[8903, 225, 1021, 26, 70, "InlineGuideFunctionListing",ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b",
+ CellID->438361566]
 }, Open  ]],
-Cell[7780, 196, 78, 0, 70, "FooterCell",ExpressionUUID->"dee4b764-8dcc-40b7-bbad-1c3498d6f8b1"]
+Cell[9939, 254, 1817, 49, 70, "GuideRelatedLinksSection",ExpressionUUID->"68e7d088-cd26-42f2-b051-28cb3506d93f"],
+Cell[11759, 305, 78, 0, 70, "FooterCell",ExpressionUUID->"a726a6a1-5ee1-47eb-8a22-7dd79594d801"]
 }
 ]
 *)

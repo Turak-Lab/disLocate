@@ -2129,14 +2129,14 @@ histo
 
 
 (* Bond Order and Angular Analysis *)
-Options[BondOrderParameter]={passVor->True,fast->True,edge->"NOEDGE",vorbop->True,box-> {},normalized->False,debug->False};
-SetOptions[BondOrderParameter,passVor->True,fast->True,edge->"NOEDGE",vorbop->True,box-> {},normalized->False,debug->False];
+Options[BondOrderParameter]={passVor->True,fast->True,edge->"NOEDGE",vorbop->True,box-> {},normalized->True,debug->False};
+SetOptions[BondOrderParameter,passVor->True,fast->True,edge->"NOEDGE",vorbop->True,box-> {},normalized->True,debug->False];
 BondOrderParameter[unBoundedData2D_, whichL_, OptionsPattern[]] := Block[{Ylm,\[Theta]Invariant,BondOrderCalc,bondOrder,particlePickList,
 vor,fullPoints,delaunayNearestNeighbours,npoints,commonVertices,commonVertex,angles,particleIndicies,vorFacetWeight,
 passVor=OptionValue[passVor],
 fastO=OptionValue[fast],
 edgeO=OptionValue[edge],
-vorbop=OptionValue[vorbop],
+vorbopO=OptionValue[vorbop],
 imagebox=OptionValue[box],
 normalizedO=OptionValue[normalized],
 debug=OptionValue[debug]
@@ -2167,13 +2167,13 @@ fullPoints=fullPoints[[1]];
 ,
 particleIndicies=Range[npoints]  ];
 
-
+	
 (* Table of Bond Order Parameters  *)
 bondOrder=Table[
 
 commonVertex=commonVertices[[particle]];
 
-If[vorbop==True,
+If[vorbopO==True,
 vorFacetWeight=MapThread[EuclideanDistance[#1,#2]&,Transpose[commonVertex]];
 vorFacetWeight=Divide[vorFacetWeight,Total[vorFacetWeight]];
 ,
@@ -2189,7 +2189,7 @@ BondOrderCalc[angles,vorFacetWeight,whichL]
 
 	
 (*bondOrder[[particleIndicies]]*)
-If[normalizedO===True, bondOrder[[particleIndicies]],  bondOrder[[particleIndicies]]/ BOPexp[whichL]]
+If[normalizedO===False, bondOrder[[particleIndicies]],  bondOrder[[particleIndicies]]/ BOPexp[whichL]]
 
 
 ];

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    440711,       8259]
+NotebookDataLength[    440712,       8259]
 NotebookOptionsPosition[    436875,       8174]
-NotebookOutlinePosition[    439121,       8230]
-CellTagsIndexPosition[    439078,       8227]
+NotebookOutlinePosition[    439122,       8230]
+CellTagsIndexPosition[    439079,       8227]
 WindowTitle->Solution to VoronoiTessellation Practice
 WindowFrame->Normal*)
 
@@ -27,11 +27,11 @@ Cell[BoxData[GridBox[{
           TemplateBox[{12},
            "Spacer1"], Cell["DIS LOCATE TECH NOTE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "9aa9784d-7e77-4f89-bfb6-e9a41e354bc2"], 
+           "74c750f0-6744-4a14-bb1a-ce7f90b2ba7d"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "9cda97a2-fab1-42b5-9ff1-9dded77f2869"],
+         "732189a0-78dd-44b3-9afa-bd33d160cab6"],
         Background->RGBColor[
          0.3843137254901961, 0.4627450980392157, 0.7019607843137254],
         ItemSize->Full], ""}
@@ -51,8 +51,8 @@ Cell[BoxData[GridBox[{
            AspectRatio->1,
            ImageSize->20,
            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-          "12064df0-072b-4c15-b5a3-8e65228062ac"]
-        }],ExpressionUUID->"64722f8d-75f9-4838-8296-62f348665956"],
+          "6030941e-3276-46ee-9a6e-76ee79e4e840"]
+        }],ExpressionUUID->"4097ad69-f12e-419c-8aa7-fa382a20de59"],
         StripOnInput->
          False], {"\<\"disLocate/tutorial/\
 SolutionToVoronoiTessellationPractice\"\>":>
@@ -83,7 +83,7 @@ SolutionToVoronoiTessellationPractice.html"], StandardForm]], "Input",
         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
          NotebookLocate[{
            URL[If[
-              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$87720], 
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$11742], 
               "http://reference.wolfram.com/system-modeler/", 
               "http://reference.wolfram.com/language/"] <> 
             "disLocate/tutorial/SolutionToVoronoiTessellationPractice" <> 
@@ -93,15 +93,15 @@ SolutionToVoronoiTessellationPractice.html"], StandardForm]], "Input",
        MenuStyle->"URLMenu"],
       MouseAppearanceTag["LinkHand"]]],
      LineSpacing->{1.4, 0},ExpressionUUID->
-     "63586481-c326-4c2a-9f8b-0efe808ed8e1"]], "AnchorBar",
+     "29145b46-53dc-433d-80c5-204cdc67d5ff"]], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "b96003ea-ba72-442e-9f65-1fefbdb56792"]}
+     "1bad7946-5778-47c3-b383-d0a7d25f8db2"]}
   }]], "AnchorBarGrid",
  GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
      Scaled[0.65], {
       Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
    "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"61478a69-e274-4a6f-97ae-5c1fa4a8f4fc"],
+ CellID->1,ExpressionUUID->"cf96ffc6-c290-4722-8fb7-8eabc901b591"],
 
 Cell[CellGroupData[{
 
@@ -8166,11 +8166,11 @@ Cell[BoxData[GridBox[{
          "041eb27b-1e16-4411-8997-46cbd47faf52"]], "TutorialMoreAbout",
          ExpressionUUID->"9f5a05f3-1e71-4e51-b0e6-0f4c863dd272"]}]}
      }]}
-  }]], "TutorialMoreAboutSection",ExpressionUUID->"0d131eef-7d2c-406e-ac86-\
-df4326827997"]
+  }]], "TutorialMoreAboutSection",ExpressionUUID->"ed6e86c1-ea89-4592-a1d1-\
+344cbdfede60"]
 }, Open  ]],
 
-Cell[" ", "FooterCell",ExpressionUUID->"efe42cfd-2be2-4124-8513-32b164ea99fe"]
+Cell[" ", "FooterCell",ExpressionUUID->"c7eb8129-4d16-4fa3-bfe0-3d923f7bbf96"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -8185,13 +8185,13 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 7, 3, 12, 17, 9.2676605}", 
+   "built" -> "{2023, 7, 5, 11, 55, 29.2297384}", 
     "history" -> {"", "", "", ""}, "context" -> "disLocate`", 
     "keywords" -> {"disLocate"}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
     "dis Locate Tech Note", "language" -> "en", "paclet" -> "disLocate", 
     "status" -> "None", "summary" -> " ", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$87692, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$11714, "title" -> 
     "Solution to VoronoiTessellation Practice", "titlemodifier" -> "", 
     "metadescription" -> "", "windowtitle" -> 
     "Solution to VoronoiTessellation Practice", "type" -> "Tech Note", "uri" -> 
@@ -8216,7 +8216,7 @@ StyleDefinitions->Notebook[{
     CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
   FrontEndVersion -> "13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
    StyleDefinitions -> "Default.nb"],
-ExpressionUUID->"881815de-d95f-4614-876b-c5ef95b8473e"
+ExpressionUUID->"5a9c20de-9e12-4900-bdf7-23e6ebee0b5b"
 ]
 (* End of Notebook Content *)
 
@@ -8229,7 +8229,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[612, 21, 3527, 82, 70, "AnchorBarGrid",ExpressionUUID->"61478a69-e274-4a6f-97ae-5c1fa4a8f4fc",
+Cell[612, 21, 3527, 82, 70, "AnchorBarGrid",ExpressionUUID->"cf96ffc6-c290-4722-8fb7-8eabc901b591",
  CellID->1],
 Cell[CellGroupData[{
 Cell[4164, 107, 138, 1, 70, "TechNoteTitle",ExpressionUUID->"cec2d417-07d3-4228-b440-486409f9083c",
@@ -8258,9 +8258,9 @@ Cell[349951, 6299, 86062, 1850, 70, "Print",ExpressionUUID->"56565808-f601-421b-
  CellID->124394667]
 }, Open  ]]
 }, Open  ]],
-Cell[436040, 8153, 738, 16, 70, "TutorialMoreAboutSection",ExpressionUUID->"0d131eef-7d2c-406e-ac86-df4326827997"]
+Cell[436040, 8153, 738, 16, 70, "TutorialMoreAboutSection",ExpressionUUID->"ed6e86c1-ea89-4592-a1d1-344cbdfede60"]
 }, Open  ]],
-Cell[436793, 8172, 78, 0, 70, "FooterCell",ExpressionUUID->"efe42cfd-2be2-4124-8513-32b164ea99fe"]
+Cell[436793, 8172, 78, 0, 70, "FooterCell",ExpressionUUID->"c7eb8129-4d16-4fa3-bfe0-3d923f7bbf96"]
 }
 ]
 *)

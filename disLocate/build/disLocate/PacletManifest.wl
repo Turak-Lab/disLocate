@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "3fb8e1538b589d668c9430912b809267694ad7906bedd8bc668a3a180912dd54"
+            "ab2ef96d34483f2d86d9cbc4e8e44e79f8e257a7983798d1f81c9823708eb729"
                 
         |>
         ,
@@ -24,7 +24,63 @@
             ,
             "Hash"
             ->
-            "305f628478f67b45f5d83b91253bd3c301ff2b105a1f6d3f7915b48efab70905"
+            "5c41d85e830c9675c33ccd2ab7af6fd5020065774a69e88c9ee539ce6b7d1f3a"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\AverageFirstNeighbourDistance.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "c35c574dd1afe449913bf3fa7ef5b466c6abefefebfbdce34f7d0311c2702ba2"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\BondOrderParameter.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "91c4165a7c0a7648ace12ea7a8c22e2e9875daa319607884024dd925937f7904"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\CoordinationNeighbourCloud.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "68a6ea57579282ca1a8d0ceba25263d44d3068a3f100ca66c0a625546fb76345"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\ReferencePages\\Symbols\\ExpectedHexagonalDiameter.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "c1af46ce4f53d5acce204faa493d017106aaa1ac825d434a04c0f4e24bdf7039"
                 
         |>
         ,
@@ -38,7 +94,7 @@
             ,
             "Hash"
             ->
-            "4d54fe09642953223223ead138e2b0ea9ac276d9d0781f9329d099d79eb8e90b"
+            "0943fbbf277b1b454b66e01253ef2d249d0b15d41b394fbd5897384b9c708af8"
                 
         |>
         ,
@@ -52,7 +108,7 @@
             ,
             "Hash"
             ->
-            "230814dcea81c1e95e68eecf0521acdeaf82c2f130997049747da10bee3e57f2"
+            "4ceaf2c7fea692c229578e55807c79f3e074a23cbafe48687574504b2c6a7974"
                 
         |>
         ,
@@ -66,7 +122,7 @@
             ,
             "Hash"
             ->
-            "f78fb4a9ad979f6d6171603514c26b247f2d63d70b798c8bd26beefd97a2df26"
+            "607bc141965bb6622d54e3989bbd46021b7832369d3c4f55650903ed76097ef8"
                 
         |>
     }
