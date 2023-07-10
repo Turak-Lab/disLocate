@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15455,        377]
-NotebookOptionsPosition[     11841,        307]
-NotebookOutlinePosition[     14275,        359]
-CellTagsIndexPosition[     14232,        356]
+NotebookDataLength[     15456,        377]
+NotebookOptionsPosition[     11842,        307]
+NotebookOutlinePosition[     14276,        359]
+CellTagsIndexPosition[     14233,        356]
 WindowTitle->disLocate
 WindowFrame->Normal*)
 
@@ -27,11 +27,11 @@ Cell[BoxData[GridBox[{
           TemplateBox[{12},
            "Spacer1"], Cell["DIS LOCATE GUIDE", "PacletNameCell",
            TextAlignment->Center,ExpressionUUID->
-           "27ca46b6-2174-4577-b432-76bed1ec4f5a"], 
+           "cbcad3c8-62d6-467a-abf5-4c2963bc385c"], 
           TemplateBox[{8},
            "Spacer1"]}]],
          TextAlignment->Center,ExpressionUUID->
-         "3daabd53-b651-4413-b462-b417fa878913"],
+         "3a9f488d-b3ca-4ee8-a869-7cd0e3a22e7b"],
         Background->RGBColor[0.85098, 0.396078, 0],
         ItemSize->Full], ""}
      },
@@ -51,8 +51,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "41703e37-bd44-4d3e-bfa3-a7a55a172795"]
-         }],ExpressionUUID->"b2fdaaf0-1eee-4265-97ed-7e2dda27f561"],
+           "c79cad6e-ce78-4287-8c72-813472b8b662"]
+         }],ExpressionUUID->"52d484bc-cd78-470b-9465-dd3a3dd727e9"],
          StripOnInput->False], {"\<\"CoordinationNeighbourCloud\"\>":>
         Documentation`HelpLookup[
         "paclet:disLocate/ref/CoordinationNeighbourCloud"], \
@@ -65,7 +65,7 @@ Cell[BoxData[GridBox[{
         MenuStyle->"GuideFunction"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "857fb215-e9cd-4fc4-977f-be48feae7d20"],
+      "54eae59e-07ce-4861-b9ec-0da3636e9d21"],
      "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
 \[ThickSpace]",
      Cell[BoxData[
@@ -81,8 +81,8 @@ Cell[BoxData[GridBox[{
             AspectRatio->1,
             ImageSize->20,
             PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-           "f1b8dec6-a370-4226-aae4-4d4b1bf87fc8"]
-         }],ExpressionUUID->"1d91fe97-99bc-45e4-84a0-6d758df6c2f5"],
+           "3551eb74-2ee8-4f01-8e19-0c02a94b9e5b"]
+         }],ExpressionUUID->"99ffe541-c72c-43ec-947e-7377b8b51467"],
          StripOnInput->False], {"\<\"disLocate/guide/DisLocate\"\>":>
         None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
         Module[{DocumentationSearch`Private`nb$}, 
@@ -109,7 +109,7 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
          Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
           NotebookLocate[{
             URL[If[
-               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7332], 
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$28345], 
                "http://reference.wolfram.com/system-modeler/", 
                "http://reference.wolfram.com/language/"] <> 
              "disLocate/guide/DisLocate" <> ".html"], None}]}]},
@@ -118,16 +118,16 @@ DisLocate.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
         MenuStyle->"URLMenu"],
        MouseAppearanceTag["LinkHand"]]],
       LineSpacing->{1.4, 0},ExpressionUUID->
-      "72118fed-1228-4952-af7e-32db551e0cf6"]
+      "a4da76a2-29bd-4002-8e77-a17701a7a73b"]
     }], "AnchorBar",
      CacheGraphics->False,ExpressionUUID->
-     "6a21520d-e10a-4a92-b30b-673ef978e1fa"]}
+     "8fc07f88-51df-4876-be33-2f12c2d69d77"]}
   }]], "AnchorBarGrid",
  GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
      Scaled[0.65], {
       Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
    "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"278120f1-584e-41ba-a53f-95079f686390"],
+ CellID->1,ExpressionUUID->"f82c1032-9570-4496-9d7d-a30ecfe90568"],
 
 Cell[CellGroupData[{
 
@@ -155,12 +155,12 @@ for OLEDs, and simulated molecules).(",
     "https://www.nature.com/articles/s41598-017-18894-7"},
    "WebLink",
    BaseStyle->{"GuideAbstract"}]],ExpressionUUID->
-  "49ac6db5-98af-44e3-a7c9-4eb42661b6e3"],
+  "532c9003-f9ee-437a-a963-491d59a4d8f3"],
  ").\n\nTurak Lab"
 }], "GuideAbstract",
  CellID->129513766,ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a"],
 
-Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"7729e017-a30e-4107-8788-b2c9de5e80af"],
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"7029e268-7359-416e-87de-4b9005a970f4"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -277,8 +277,8 @@ Cell[BoxData[GridBox[{
             "https://github.com/Turak-Lab/disLocate"},
            "WebLink",
            BaseStyle->{"GuideRelatedLinks"}]],ExpressionUUID->
-          "783c5d62-a402-4c9b-a8f1-1ccbfb918443"]}]],ExpressionUUID->
-        "42d52223-0f9a-4176-87a0-a27b5f2c4a58"]], "RelatedLinks",
+          "3de1b4e1-37b2-4399-b4fc-5ff4831bde94"]}]],ExpressionUUID->
+        "ccc9ed49-7f3a-4975-b02c-5daab1096d6b"]], "RelatedLinks",
         ExpressionUUID->"2fde9849-1abd-4409-b119-d31d0c02813d"]},
       {Cell[TextData[Cell[BoxData[
         RowBox[{
@@ -296,14 +296,14 @@ Cell[BoxData[GridBox[{
             "https://doi.org/10.1038/s41598-017-18894-7"},
            "WebLink",
            BaseStyle->{"GuideRelatedLinks"}]],ExpressionUUID->
-          "f5dccd0b-2a59-4720-89c3-122d462440aa"]}]],ExpressionUUID->
-        "b857a7e8-d09d-4b7c-9ce9-78fda2a77d08"]], "RelatedLinks",
+          "0615385e-0896-4146-b199-fd771c50ce73"]}]],ExpressionUUID->
+        "34588bdd-913e-41f3-b2ee-369e372a83ee"]], "RelatedLinks",
         ExpressionUUID->"30e38f91-fe67-4424-976f-c83c2846555c"]}
      }]}
-  }]], "GuideRelatedLinksSection",ExpressionUUID->"68e7d088-cd26-42f2-b051-\
-28cb3506d93f"],
+  }]], "GuideRelatedLinksSection",ExpressionUUID->"d3640643-9ca1-4b1b-8849-\
+724e8c62e3dc"],
 
-Cell[" ", "FooterCell",ExpressionUUID->"a726a6a1-5ee1-47eb-8a22-7dd79594d801"]
+Cell[" ", "FooterCell",ExpressionUUID->"2c5088e4-663a-45b8-ad92-9a8cdbf96f4e"]
 },
 Saveable->False,
 ScreenStyleEnvironment->"Working",
@@ -318,7 +318,7 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2023, 7, 5, 11, 54, 57.9667383}", 
+   "built" -> "{2023, 7, 10, 9, 56, 9.3961595}", 
     "history" -> {"??", "", "", ""}, "context" -> "disLocate`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -337,7 +337,7 @@ organization of opals and inverse opals as photonic crystals, the \
 distribution of self-trapping filaments in polymer waveguides, the \
 distribution of dopants for OLEDs, and simulated molecules).(Bumstead et al., \
 2017). Turak Lab", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$7296, "title" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$28311, "title" -> 
     "disLocate", "titlemodifier" -> "", "metadescription" -> "", 
     "windowtitle" -> "disLocate", "type" -> "Guide", "uri" -> 
     "disLocate/guide/DisLocate"}},
@@ -345,7 +345,7 @@ CacheGraphics->False,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "UTF-8"],
-ExpressionUUID->"179f6309-c001-4dfe-aff1-4e6f0021fe75"
+ExpressionUUID->"39b36ab1-ab45-4026-b60a-6d84d0b7db56"
 ]
 (* End of Notebook Content *)
 
@@ -358,27 +358,27 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[581, 21, 4613, 108, 70, "AnchorBarGrid",ExpressionUUID->"278120f1-584e-41ba-a53f-95079f686390",
+Cell[581, 21, 4614, 108, 70, "AnchorBarGrid",ExpressionUUID->"f82c1032-9570-4496-9d7d-a30ecfe90568",
  CellID->1],
 Cell[CellGroupData[{
-Cell[5219, 133, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
+Cell[5220, 133, 106, 1, 70, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
  CellID->204292035],
-Cell[5328, 136, 1313, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
+Cell[5329, 136, 1313, 24, 70, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
  CellID->129513766],
-Cell[6644, 162, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"7729e017-a30e-4107-8788-b2c9de5e80af"],
-Cell[6740, 164, 652, 17, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
+Cell[6645, 162, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"7029e268-7359-416e-87de-4b9005a970f4"],
+Cell[6741, 164, 652, 17, 70, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
  CellID->300640212],
-Cell[7395, 183, 657, 17, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
+Cell[7396, 183, 657, 17, 70, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
  CellID->41181813],
-Cell[8055, 202, 739, 18, 70, "GuideText",ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0",
+Cell[8056, 202, 739, 18, 70, "GuideText",ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0",
  CellID->38272560],
-Cell[8797, 222, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63",
+Cell[8798, 222, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63",
  CellID->479694850],
-Cell[8903, 225, 1021, 26, 70, "InlineGuideFunctionListing",ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b",
+Cell[8904, 225, 1021, 26, 70, "InlineGuideFunctionListing",ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b",
  CellID->438361566]
 }, Open  ]],
-Cell[9939, 254, 1817, 49, 70, "GuideRelatedLinksSection",ExpressionUUID->"68e7d088-cd26-42f2-b051-28cb3506d93f"],
-Cell[11759, 305, 78, 0, 70, "FooterCell",ExpressionUUID->"a726a6a1-5ee1-47eb-8a22-7dd79594d801"]
+Cell[9940, 254, 1817, 49, 70, "GuideRelatedLinksSection",ExpressionUUID->"d3640643-9ca1-4b1b-8849-724e8c62e3dc"],
+Cell[11760, 305, 78, 0, 70, "FooterCell",ExpressionUUID->"2c5088e4-663a-45b8-ad92-9a8cdbf96f4e"]
 }
 ]
 *)

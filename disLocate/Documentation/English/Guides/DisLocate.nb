@@ -1,0 +1,328 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13132,        320]
+NotebookOptionsPosition[      9684,        245]
+NotebookOutlinePosition[     10226,        263]
+CellTagsIndexPosition[     10183,        260]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["disLocate", "GuideTitle",
+ CellID->204292035,ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25"],
+
+Cell[TextData[{
+ "disLocate is a Mathematica package that calculates various translational, \
+entropic and angular order metrics and parameters from a list of particle \
+centroid positions. These are displayed in various configurations to give \
+access to the  spatial statistical characteristics of 2D arrays of objects.\n\
+See M. Bumstead, K. Liang, G. Hanta, L.S. Hui, and A. Turak, \
+\[OpenCurlyDoubleQuote]disLocate: tools to rapidly quantify local \
+intermolecular structure to assess two-dimensional order in self-assembled \
+systems,\[CloseCurlyDoubleQuote] Scientific Reports 8(1), 1554 (2018).\n\n\
+Primarily used for analyzing arrays of nanoparticles from AFM and SEM images, \
+it can be easily applied to any 2D array of objects (eg. organization of \
+opals and inverse opals as photonic crystals, the distribution of \
+self-trapping filaments in polymer waveguides, the distribution of dopants \
+for OLEDs, and simulated molecules).(",
+ ButtonBox["Bumstead et al., 2017",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.nature.com/articles/s41598-017-18894-7"], None},
+  ButtonNote->"https://www.nature.com/articles/s41598-017-18894-7"],
+ ").\n\nTurak Lab"
+}], "GuideAbstract",
+ CellChangeTimes->{{3.896508716619385*^9, 3.8965087770591583`*^9}, {
+   3.8965088863293858`*^9, 3.896508918731391*^9}, 3.8965089515239987`*^9, {
+   3.8965092426646557`*^9, 3.896509242665655*^9}, {3.8965143292359085`*^9, 
+   3.8965143982909336`*^9}, 3.8974825517511005`*^9},
+ CellID->129513766,ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->111702283,ExpressionUUID->"1ec2e2f5-966a-4b2f-b62b-504ef9414ac0"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["PlotPairCorrelationFunction",
+   BaseStyle->"Link",
+   ButtonData->"paclet:disLocate/ref/PlotPairCorrelationFunction"]], 
+  "InlineGuideFunction",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "f15d63de-a3bd-4868-8fd6-a44da1bd6907"],
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
+ "\[LongDash] Plots a pair correlation function (radial distribution \
+function) of one or multiple sets of 2d points"
+}], "GuideText",
+ CellChangeTimes->{{3.896508293331896*^9, 3.8965083011777935`*^9}, {
+  3.896508397065536*^9, 3.896508397065536*^9}, {3.896508868134839*^9, 
+  3.8965088728007755`*^9}, {3.896509256282835*^9, 3.896509272700451*^9}, {
+  3.8965109531919975`*^9, 3.896510959866784*^9}, {3.8965110047890663`*^9, 
+  3.8965110508153667`*^9}, {3.8965127227510605`*^9, 3.8965127466715155`*^9}, {
+  3.8965139093852425`*^9, 3.896513934996475*^9}, {3.897482363356225*^9, 
+  3.8974823679919157`*^9}},
+ CellID->300640212,ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["PlotVoronoiTessellations",
+   BaseStyle->"Link",
+   ButtonData->"paclet:disLocate/ref/PlotVoronoiTessellations"]], 
+  "InlineGuideFunction",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "c6d0de5e-82ef-4b17-9de8-65e69df8f91b"],
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
+ "\[LongDash] Creates a voronoi tessellation graphic of a set of 2d points, \
+colour-coded according to some analysis parameter. "
+}], "GuideText",
+ CellChangeTimes->{{3.8965084029080687`*^9, 3.8965084087728615`*^9}, {
+   3.896508857448352*^9, 3.8965088634688473`*^9}, {3.896509279858085*^9, 
+   3.896509313851534*^9}, {3.896509426939013*^9, 3.8965094313313313`*^9}, 
+   3.8965095242686496`*^9, {3.896509559563487*^9, 3.8965095863642063`*^9}, {
+   3.896510117578709*^9, 3.896510121819852*^9}, {3.89651105546608*^9, 
+   3.8965110778152447`*^9}, {3.8965127483830924`*^9, 3.896512777560069*^9}, {
+   3.896513944957632*^9, 3.8965139758199387`*^9}, {3.8974821085369873`*^9, 
+   3.8974821349763203`*^9}},
+ CellID->41181813,ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["CoordinationNeighbourCloud",
+   BaseStyle->"Link",
+   ButtonData->"paclet:disLocate/ref/CoordinationNeighbourCloud"]], 
+  "InlineGuideFunction",
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "35525b58-ea17-4fcb-9f37-0bdd87b6c07c"],
+ StyleBox[" ",
+  FontColor->RGBColor[0, 0, 1]],
+ "\[LongDash] Creates a 2d probability map of the relative angular separation \
+and radial distance for only first neighbours for only the subsection of \
+particles that share a similar coordination number. "
+}], "GuideText",
+ CellChangeTimes->{{3.897482136754021*^9, 3.897482174072456*^9}, {
+  3.8974823918615556`*^9, 3.8974823918615556`*^9}},
+ CellID->38272560,ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0"],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->479694850,ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+   "\"BondOrderParameter\"", "paclet:disLocate/ref/BondOrderParameter"},
+   "HyperlinkPaclet"]],
+  CellChangeTimes->{3.897481754251156*^9},
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "e416cc71-2c97-49c9-853b-d274cdcfbfbe"],
+ StyleBox[" . ",
+  FontColor->RGBColor[0., 0., 0.6509803921568628]],
+ Cell[BoxData[
+  TemplateBox[{
+   "\"AverageFirstNeighbourDistance\"", 
+    "paclet:disLocate/ref/AverageFirstNeighbourDistance"},
+   "HyperlinkPaclet"]],
+  CellChangeTimes->{3.8974820452711244`*^9},
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "599ad086-6c9a-41dd-a61a-125ff2fdd77e"],
+ StyleBox[" . ",
+  FontColor->RGBColor[0., 0., 0.6509803921568628]],
+ Cell[BoxData[
+  TemplateBox[{
+   "\"ExpectedHexagonalDiameter\"", 
+    "paclet:disLocate/ref/ExpectedHexagonalDiameter"},
+   "HyperlinkPaclet"]],
+  CellChangeTimes->{3.897482026908001*^9},
+  FontColor->RGBColor[0., 0., 0.6509803921568628],ExpressionUUID->
+  "e2b8eb92-a96e-4866-9765-fde2dea7f7a3"]
+}], "InlineGuideFunctionListing",
+ CellChangeTimes->{{3.897482414746996*^9, 3.8974824484670734`*^9}},
+ CellID->438361566,ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b"]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiter",
+ CellID->209301440,ExpressionUUID->"0639cd7f-636d-4e1a-9be7-bfc170b04e30"]
+}, Open  ]],
+
+Cell["Tech Notes", "GuideTutorialsSection",
+ CellID->593324369,ExpressionUUID->"b457f5da-b116-46ca-84d8-4862cf5c4107"],
+
+Cell["Related Guides", "GuideMoreAboutSection",
+ CellChangeTimes->{{3.8430423939366693`*^9, 3.843042395176153*^9}},
+ CellID->788957193,ExpressionUUID->"b168e4ae-e2e2-49c0-bb0d-972210461762"],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellChangeTimes->{{3.8974824862949886`*^9, 3.8974824867030525`*^9}},
+ CellID->4269159,ExpressionUUID->"669020b6-8aa6-4e5b-964c-68401f7fc7a9"],
+
+Cell[TextData[ButtonBox["disLocate GitHub",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://github.com/Turak-Lab/disLocate"], None}]], "RelatedLinks",
+ CellChangeTimes->{{3.897484493974018*^9, 3.897484505816813*^9}, {
+  3.897484600388919*^9, 3.897484601588683*^9}, {3.8974852973314433`*^9, 
+  3.897485297345481*^9}},
+ CellID->209070367,ExpressionUUID->"2fde9849-1abd-4409-b119-d31d0c02813d"],
+
+Cell[TextData[ButtonBox["Overview Paper: disLocate",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://doi.org/10.1038/s41598-017-18894-7"], None}]], "RelatedLinks",
+ CellChangeTimes->{{3.897484493974018*^9, 3.897484505816813*^9}, {
+  3.897484600388919*^9, 3.897484601588683*^9}, {3.8974853031392527`*^9, 
+  3.8974853101087646`*^9}},
+ CellID->370462742,ExpressionUUID->"30e38f91-fe67-4424-976f-c83c2846555c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->2648280,ExpressionUUID->"a6f3008d-a36a-4326-9d7b-811fb7f3b7ee"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["??", "HistoryData",
+  CellTags->"New",ExpressionUUID->"53d81cac-4d09-4f1f-985c-e81a95b06842"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"755af3a1-0fd3-44bf-a5e3-e82587a0be52"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"d04dc777-97d0-4cc3-8a97-ab4014307cc7"]
+}], "History",
+ CellID->1233575,ExpressionUUID->"224cd9f5-5efc-44bc-be42-4d69e5966b27"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->521861970,ExpressionUUID->"a3a64d75-bb34-42d2-856b-c548e18e0703"],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->223209538,ExpressionUUID->"9766fb35-7b88-41bd-8993-202b6a2e599e"],
+
+Cell["disLocate", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->327189191,ExpressionUUID->"9208aa9a-7ff9-4dd3-afcf-c5ee3945466d"],
+
+Cell["disLocate`", "Categorization",
+ CellLabel->"Context",
+ CellID->111934939,ExpressionUUID->"ecb14610-9b45-4059-aac4-b69e59c4c744"],
+
+Cell["disLocate/guide/DisLocate", "Categorization",
+ CellLabel->"URI",
+ CellID->294472126,ExpressionUUID->"dca4f104-c09f-42cc-a65b-9b17593d4f28"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->540731818,ExpressionUUID->"3d84226a-7ebe-43da-a7a3-1297e82c77da"],
+
+Cell["XXXX", "Keywords",
+ CellID->412477328,ExpressionUUID->"cac869d1-ef44-4e25-bd45-283aacdf6cca"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 568.8},
+WindowMargins->{{0, Automatic}, {-2.3999999999999773`, Automatic}},
+TaggingRules-><|"Paclet" -> "disLocate"|>,
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"a1911dbd-923f-41eb-8aea-db7a3fb5d1e5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 106, 1, 88, "GuideTitle",ExpressionUUID->"f5f6b9ef-ad69-4d45-841d-14493f7dba25",
+ CellID->204292035],
+Cell[689, 25, 1554, 25, 320, "GuideAbstract",ExpressionUUID->"06987c54-166a-4040-933f-d05e1f3f396a",
+ CellID->129513766]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2280, 55, 108, 1, 72, "GuideFunctionsSection",ExpressionUUID->"1ec2e2f5-966a-4b2f-b62b-504ef9414ac0",
+ CellID->111702283],
+Cell[2391, 58, 1010, 20, 42, "GuideText",ExpressionUUID->"d32febef-edfa-45d7-ad9c-efcc0fbf3589",
+ CellID->300640212],
+Cell[3404, 80, 1096, 21, 42, "GuideText",ExpressionUUID->"f714d525-9616-4241-baf5-63f04f8e78f8",
+ CellID->41181813],
+Cell[4503, 103, 746, 16, 59, "GuideText",ExpressionUUID->"b714064d-9791-4ab5-bc38-48affe96dbf0",
+ CellID->38272560],
+Cell[CellGroupData[{
+Cell[5274, 123, 103, 1, 27, "GuideDelimiter",ExpressionUUID->"0d76e2e5-31b8-4e64-a637-d16ff9177c63",
+ CellID->479694850],
+Cell[5380, 126, 1220, 30, 25, "InlineGuideFunctionListing",ExpressionUUID->"23510d8d-1c93-40b0-ab1c-a1527908431b",
+ CellID->438361566]
+}, Open  ]],
+Cell[6615, 159, 103, 1, 27, "GuideDelimiter",ExpressionUUID->"0639cd7f-636d-4e1a-9be7-bfc170b04e30",
+ CellID->209301440]
+}, Open  ]],
+Cell[6733, 163, 118, 1, 74, "GuideTutorialsSection",ExpressionUUID->"b457f5da-b116-46ca-84d8-4862cf5c4107",
+ CellID->593324369],
+Cell[6854, 166, 190, 2, 68, "GuideMoreAboutSection",ExpressionUUID->"b168e4ae-e2e2-49c0-bb0d-972210461762",
+ CellID->788957193],
+Cell[CellGroupData[{
+Cell[7069, 172, 192, 2, 68, "GuideRelatedLinksSection",ExpressionUUID->"669020b6-8aa6-4e5b-964c-68401f7fc7a9",
+ CellID->4269159],
+Cell[7264, 176, 399, 7, 22, "RelatedLinks",ExpressionUUID->"2fde9849-1abd-4409-b119-d31d0c02813d",
+ CellID->209070367],
+Cell[7666, 185, 414, 7, 22, "RelatedLinks",ExpressionUUID->"30e38f91-fe67-4424-976f-c83c2846555c",
+ CellID->370462742]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8117, 197, 108, 1, 72, "MetadataSection",ExpressionUUID->"a6f3008d-a36a-4326-9d7b-811fb7f3b7ee",
+ CellID->2648280],
+Cell[8228, 200, 471, 11, 26, "History",ExpressionUUID->"224cd9f5-5efc-44bc-be42-4d69e5966b27",
+ CellID->1233575],
+Cell[CellGroupData[{
+Cell[8724, 215, 122, 1, 21, "CategorizationSection",ExpressionUUID->"a3a64d75-bb34-42d2-856b-c548e18e0703",
+ CellID->521861970],
+Cell[8849, 218, 133, 2, 70, "Categorization",ExpressionUUID->"9766fb35-7b88-41bd-8993-202b6a2e599e",
+ CellID->223209538],
+Cell[8985, 222, 137, 2, 70, "Categorization",ExpressionUUID->"9208aa9a-7ff9-4dd3-afcf-c5ee3945466d",
+ CellID->327189191],
+Cell[9125, 226, 134, 2, 70, "Categorization",ExpressionUUID->"ecb14610-9b45-4059-aac4-b69e59c4c744",
+ CellID->111934939],
+Cell[9262, 230, 145, 2, 70, "Categorization",ExpressionUUID->"dca4f104-c09f-42cc-a65b-9b17593d4f28",
+ CellID->294472126]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9444, 237, 110, 1, 21, "KeywordsSection",ExpressionUUID->"3d84226a-7ebe-43da-a7a3-1297e82c77da",
+ CellID->540731818],
+Cell[9557, 240, 99, 1, 70, "Keywords",ExpressionUUID->"cac869d1-ef44-4e25-bd45-283aacdf6cca",
+ CellID->412477328]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

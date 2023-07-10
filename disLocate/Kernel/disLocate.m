@@ -5,7 +5,7 @@ BeginPackage["disLocate`"]
 (* Step 1. - Merge All Cells Toghether *)
 (* Step 2. - Convert To Initialization Cell *)
 (* Step 3. - Save as .M *)
-disLocateVersion:="9.2023-06-29."<>ToString["thesis-M.V9"];
+disLocateVersion:="10.2023-07-07."<>ToString["thesis-M.V10"];
 If[$VersionNumber<10,Needs["ComputationalGeometry`"];];
 
 (* Global Definiations of Colour Schemes *)
@@ -463,6 +463,8 @@ ApplyLimitedPBC::usage="ApplyLimitedPBC[data2d_, box_ ,extraArea___]"
 
 vorColourer::usage="vorColourer[colNum, OptionsPattern[] ] "
 binGen::usage="Does Even less"
+makeSimpleHexLat::usage="Makes a very simple (but actually hexagonal) hexagonal lattice "
+Hexaticize2::usage="Hexaticize with slightly better norm?"
 
 Begin["`Private`"]
 
@@ -481,6 +483,26 @@ Clear[compilerCheckerLongNameVeryConfusing123Variable];
 
 
 
+
+makeSimpleHexLat[nP_,bbox_,rr_]:=Block[{mx,my,cA,cellR,dstep,hstep,xnmax,ynmax,theLat1,theLat2,theLat,locBox},
+mx = Max[bbox[[All,1]]  ]- Min[bbox[[All,1]]  ];
+	my = Max[bbox[[All,2]]  ]-Min[bbox[[All,2]]  ];
+cA = mx*my/nP;
+cellR = Sqrt[cA/(6 Tan[Pi/6])];
+If[rr!=0,cellR=rr];
+dstep = 2*cellR;
+hstep = 2*dstep*Cos[Pi/6];
+xnmax = Round[mx/hstep]+1;
+ynmax = Round[my/dstep]+1;
+
+theLat1 =Table[ {0,dstep/2}+   {i*hstep,j*dstep },{i,xnmax},{j,ynmax}  ] //Flatten[#,1]&  ;
+theLat2 = Table[  {hstep/2,dstep/2+dstep*Sin[Pi/6]}+ {i*hstep,j*dstep },{i,0,xnmax},{j,0,ynmax}  ]//Flatten[#,1]&;
+theLat = {theLat1,theLat2}//Flatten[#,1]&;
+locBox = {{0,0},{mx,0},{mx,my},{0,my},{0,0}};
+theLat = Select[theLat,inPolyQ2[locBox,#[[1]],#[[2]]]==True& ];
+Return@theLat
+
+]
 
 Options[vorColourer]= {colourGrad->{purpleBlend,greenBlend}, bind->True, binDstr->Table[i/10,{i,11}]  };
 SetOptions[vorColourer, colourGrad->{purpleBlend,greenBlend}, bind->True, binDstr->Table[i/10,{i,11}]  ]; 
@@ -683,6 +705,7 @@ HexagonArea[r_]:= Block[{},(2*Sqrt[3])r^2];
 HexagonalDiameter[n_, box_]:=Sqrt[2/((n/PolyArea[box]) Sqrt[3])];
 (* This is the main function that moves the particle centroids! *)
 Hexaticize[d_,dr_]:=d+RandomVariate[NormalDistribution[0.0,dr],{Length[d],Length[d[[1]]]}];
+Hexaticize2[d_,dr_  ]:= d+ ReIm/@ MapThread[#1*E^(I*#2)&, {   RandomVariate[NormalDistribution[0.0,dr],{Length@d}]   ,RandomVariate[UniformDistribution[{0,2*Pi}],{Length@d}]    }  ];
 
 (* Boundary Conditions - Solving Boxes and Applying Virtual Particles *)
 AutoBoxTransform[indata2D_]:=Block[{b,ba,data2D},
@@ -1103,8 +1126,9 @@ pcell[pinV_, cellinV_]:= Block[ {al},
 coordFromPolygon[fullVert_List,polyl_List] := Table[ fullVert[[z]], {z, polyl}]
 
 
-Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True, save ->False};
-SetOptions[PlotPairCorrelationFunction,box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True, save->False];
+
+Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True, save ->False,simpleLattice->False};
+SetOptions[PlotPairCorrelationFunction,box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True, save->False,simpleLattice->False];
 PlotPairCorrelationFunction[inData2d_, OptionsPattern[]]:=
 Block[{
 xyDataList,xyData,xyLattice,r,dr,xyDataDisplaced,xyLatticeDisplaced,pcfData,pcfLattice,hexBox,
@@ -1129,7 +1153,8 @@ latticeO=OptionValue[lattice],
 absgrO=OptionValue[absgr],
 colourO=OptionValue[colours],
 varNamesO = OptionValue[varNames],
-saveO = OptionValue[save]
+saveO = OptionValue[save],
+simpleLatticeO = OptionValue[simpleLattice]
 },
 xMaxSaved=Infinity;
 
@@ -1194,11 +1219,12 @@ If[bootsO<0 ,bootsO=Abs[bootsO];];
 (* Find the Hexatic Diameter and Lattice Disorder Parameter - For Smoothing *)
 {r,dr}=ExpectedDiameterFromLattice[xyData,lattice->latticeO];
 
+
 If[dr<=0, Print["The lattice expected radius uncertainty, was estimated at 0. This is likely due to all voronoi cells having the same area. The uncertainty is set to 1% of calculated value "]; dr = 0.01*r; ];
 
 dataExpectedDiameterList[[nf]]={r,dr};
 
-
+xyLattice={};
 
 (* Choose the Reference Lattice - square or (default) hexagonal *)
 If[latticeO=="square",
@@ -1214,7 +1240,13 @@ npointsLatticeList[[nf]]=Length[xyLattice];
 
 (* Generate boots0 number of datasets that are slightly offset around original and Select only the points that are inside the window -may have been randomly displaced outside box *)
 xyDataDisplaced=Table[Select[Hexaticize[xyData,Sqrt@dr],inPolyQ2[boxO,#[[1]],#[[2]] ]==True&],{x,bootsO}];
-xyLatticeDisplaced=Table[Select[Hexaticize[xyLattice,dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];
+
+
+(* This is a test option, that uses an alternative "simple" method to generate the lattice. *)
+If[simpleLatticeO,
+xyLatticeDisplaced=Table[Select[Hexaticize2[xyLattice,1.5*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];,
+xyLatticeDisplaced=Table[Select[Hexaticize[xyLattice,1.5*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];
+];
 
 
 
@@ -1635,7 +1667,9 @@ rHex[area_]:=Sqrt[area/(6 Tan[Pi/6])];
 rSqr[area_]:=Sqrt[area]/2.;
 
 v=VoronoiCells[data2d,box->boxO,edge->edgeO, full-> False];
+
 areaDistribution=PolyArea/@v;
+
 If[latticeO=="square",r=rSqr[areaDistribution];, r=rHex[areaDistribution]; ];
 
 {2 Mean[r], Variance[r]}

@@ -10,108 +10,26 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    440712,       8259]
-NotebookOptionsPosition[    436875,       8174]
-NotebookOutlinePosition[    439122,       8230]
-CellTagsIndexPosition[    439079,       8227]
-WindowTitle->Solution to VoronoiTessellation Practice
+NotebookDataLength[    439734,       8248]
+NotebookOptionsPosition[    436414,       8173]
+NotebookOutlinePosition[    436940,       8191]
+CellTagsIndexPosition[    436897,       8188]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[GridBox[{
-   {GridBox[{
-      {
-       ItemBox[Cell[BoxData[
-         RowBox[{
-          TemplateBox[{12},
-           "Spacer1"], Cell["DIS LOCATE TECH NOTE", "PacletNameCell",
-           TextAlignment->Center,ExpressionUUID->
-           "1e03ce02-5fda-4944-b095-afeb006dabd9"], 
-          TemplateBox[{8},
-           "Spacer1"]}]],
-         TextAlignment->Center,ExpressionUUID->
-         "f26bbda0-64d7-424f-9099-138528b8f74d"],
-        Background->RGBColor[
-         0.3843137254901961, 0.4627450980392157, 0.7019607843137254],
-        ItemSize->Full], ""}
-     },
-     GridBoxAlignment->{"Rows" -> {{Center}}},
-     GridBoxItemSize->{"Columns" -> {Full, 
-         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
-     TagBox[
-      ActionMenuBox[
-       FrameBox[Cell[TextData[{
-         "URL",
-         " ",
-         Cell[BoxData[
-          GraphicsBox[
-           {GrayLevel[0.66667], Thickness[0.13], 
-            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
-           AspectRatio->1,
-           ImageSize->20,
-           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
-          "7eac8b21-89ab-41b9-b8e5-92c2eef458dc"]
-        }],ExpressionUUID->"2135a6f1-2caf-4ca7-a87b-a5567c450fdb"],
-        StripOnInput->
-         False], {"\<\"disLocate/tutorial/\
-SolutionToVoronoiTessellationPractice\"\>":>
-       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
-       Module[{DocumentationSearch`Private`nb$}, 
-        DocumentationSearch`Private`nb$ = NotebookPut[
-           Notebook[{
-             Cell[
-             "disLocate/tutorial/SolutionToVoronoiTessellationPractice"]}, 
-            Visible -> False]]; 
-        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
-        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
-       Delimiter, "\<\"Copy web URL\"\>":>
-       Module[{DocumentationSearch`Private`nb$}, 
-        DocumentationSearch`Private`nb$ = NotebookPut[
-           Notebook[{
-             Cell[
-              BoxData[
-               MakeBoxes[
-                Hyperlink[
-                "http://reference.wolfram.com/language/disLocate/tutorial/\
-SolutionToVoronoiTessellationPractice.html"], StandardForm]], "Input", 
-              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
-        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
-        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-        NotebookClose[DocumentationSearch`Private`nb$]; 
-        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
-         NotebookLocate[{
-           URL[If[
-              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$31878], 
-              "http://reference.wolfram.com/system-modeler/", 
-              "http://reference.wolfram.com/language/"] <> 
-            "disLocate/tutorial/SolutionToVoronoiTessellationPractice" <> 
-            ".html"], None}]}]},
-       Appearance->None,
-       MenuAppearance->Automatic,
-       MenuStyle->"URLMenu"],
-      MouseAppearanceTag["LinkHand"]]],
-     LineSpacing->{1.4, 0},ExpressionUUID->
-     "93772723-53d9-4b48-bfad-5285361f96c6"]], "AnchorBar",
-     CacheGraphics->False,ExpressionUUID->
-     "d931b297-63c8-4ddc-8fc4-f835b8b953df"]}
-  }]], "AnchorBarGrid",
- GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
-     Scaled[0.65], {
-      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-   "RowsIndexed" -> {}}},
- CellID->1,ExpressionUUID->"b0bc6da1-1be7-470b-9e2f-996cf0400d9e"],
 
 Cell[CellGroupData[{
-
-Cell["Solution to VoronoiTessellation Practice", "TechNoteTitle",
+Cell["Solution to VoronoiTessellation Practice", "Title",
  CellID->9869752,ExpressionUUID->"cec2d417-07d3-4228-b440-486409f9083c"],
+
+Cell[CellGroupData[{
 
 Cell["\<\
 Here is a do loop that will print all 3 types of voronoi colouring patterns \
 with variable stats option and for a list of datasets.\
-\>", "TechNoteCaption",
+\>", "Caption",
+ CellChangeTimes->{{3.8971420098529024`*^9, 3.897142017184479*^9}},
  CellID->182486724,ExpressionUUID->"0c0e537c-a63a-46d1-a8af-43ad9f5621e8"],
 
 Cell[CellGroupData[{
@@ -156,12 +74,19 @@ Cell[BoxData[{
     RowBox[{"i", ",", 
      RowBox[{"Length", "@", "combinedData"}]}], "}"}]}], 
   "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8971420391516843`*^9, 3.8971420897375593`*^9}, {
+   3.8971468760180674`*^9, 3.8971469671236515`*^9}, {3.8971480758753824`*^9, 
+   3.897148076200678*^9}, {3.8971482935268955`*^9, 3.897148351134166*^9}, 
+   3.897378877725775*^9},
  CellLabel->"In[18]:=",
  CellID->173819196,ExpressionUUID->"10aafbfd-8bd4-450c-ae2e-21a9bf3986dc"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\<\"Data set #1\"\>"], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483424978037`*^9}},
  CellLabel->"During evaluation of In[18]:=",
  CellID->48686258,ExpressionUUID->"5d3baf9d-6030-4ddb-8437-2b6553e2dde8"],
 
@@ -1342,6 +1267,9 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483442000203`*^9}},
  CellLabel->"During evaluation of In[18]:=",
  CellID->152755308,ExpressionUUID->"4dc4c245-2400-4aa0-b0a0-8afdf6ebf5cb"],
 
@@ -2299,6 +2227,9 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.897148345505036*^9}},
  CellLabel->"During evaluation of In[18]:=",
  CellID->109674508,ExpressionUUID->"955a7f35-a9ac-4268-9bc8-209450249cd3"],
 
@@ -4170,10 +4101,16 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483181295376`*^9}, 3.8971483496487737`*^9},
  CellLabel->"During evaluation of In[18]:=",
  CellID->97461840,ExpressionUUID->"4d30ae1b-1ef6-4ca9-aaa6-37b211d5fc20"],
 
 Cell[BoxData["\<\"Data set #2\"\>"], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483181295376`*^9}, 3.89714834967173*^9},
  CellLabel->"During evaluation of In[18]:=",
  CellID->322080479,ExpressionUUID->"3aeb6d98-6045-418b-a570-163731c4f67b"],
 
@@ -5343,6 +5280,9 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483181295376`*^9}, 3.897148351331273*^9},
  CellLabel->"During evaluation of In[18]:=",
  CellID->157342642,ExpressionUUID->"00270548-da8f-4bf8-a647-5c89cc197798"],
 
@@ -6294,6 +6234,9 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483181295376`*^9}, 3.8971483526239033`*^9},
  CellLabel->"During evaluation of In[18]:=",
  CellID->90457374,ExpressionUUID->"dd78a4e8-2e3b-4237-90df-770cacc5b426"],
 
@@ -8146,77 +8089,95 @@ zVn4Tp1ro/8BZvJUtQ==
        Scaled[0.02]}, {None, 
        Scaled[0.05]}},
     Ticks->{Automatic, Automatic}]}], "}"}]], "Print",
+ CellChangeTimes->{
+  3.897146970835363*^9, 3.897148078783111*^9, {3.8971483065955687`*^9, 
+   3.8971483181295376`*^9}, 3.897148355515029*^9},
  CellLabel->"During evaluation of In[18]:=",
  CellID->124394667,ExpressionUUID->"56565808-f601-421b-937b-ea5a87d960d3"]
 }, Open  ]]
+}, Open  ]]
 }, Open  ]],
 
-Cell[BoxData[GridBox[{
-   {
-    DynamicBox[FEPrivate`ImportImage[
-      FrontEnd`FileName[{"Documentation", "FooterIcons"}, "RelatedGuide.png"]],
-     ImageSizeCache->{50., {27., 33.}}], GridBox[{
-      {
-       StyleBox[
-        RowBox[{"Related", " ", "Guides"}], "TutorialMoreAboutSection"]},
-      {
-       RowBox[{"\[FilledVerySmallSquare]", Cell[TextData[Cell[BoxData[
-         TemplateBox[{"\"disLocate\"", "paclet:disLocate/guide/disLocate"},
-          "HyperlinkPaclet"]],ExpressionUUID->
-         "041eb27b-1e16-4411-8997-46cbd47faf52"]], "TutorialMoreAbout",
-         ExpressionUUID->"9f5a05f3-1e71-4e51-b0e6-0f4c863dd272"]}]}
-     }]}
-  }]], "TutorialMoreAboutSection",ExpressionUUID->"d452b7f4-937d-498e-be2e-\
-bfc58c66fed2"]
+Cell[CellGroupData[{
+
+Cell["Related Guides", "TutorialMoreAboutSection",
+ CellChangeTimes->{{3.843042384656711*^9, 3.843042386024461*^9}},
+ CellID->896534498,ExpressionUUID->"3aa1c42d-d383-4658-96fb-5b18fd4abf0c"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{"\"disLocate\"", "paclet:disLocate/guide/disLocate"},
+  "HyperlinkPaclet"]],
+ CellChangeTimes->{
+  3.8965136535242295`*^9, {3.8965136985832343`*^9, 
+   3.8965137589889407`*^9}},ExpressionUUID->"041eb27b-1e16-4411-8997-\
+46cbd47faf52"]], "TutorialMoreAbout",
+ CellChangeTimes->{{3.89714203206845*^9, 3.897142034758151*^9}, 
+   3.897379551654148*^9},
+ CellID->523076827,ExpressionUUID->"9f5a05f3-1e71-4e51-b0e6-0f4c863dd272"]
+}, Open  ]]
 }, Open  ]],
 
-Cell[" ", "FooterCell",ExpressionUUID->"bef87379-399a-4021-9464-f8bbfedfa2e0"]
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->925804716,ExpressionUUID->"4620e0fb-43cb-4e06-b911-8a591823a03a"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["", "HistoryData",
+  CellTags->"New",ExpressionUUID->"eb029059-53ae-4577-9efe-9cf85038ca1a"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"1fe677fe-4d1c-475e-ab42-0414f38a6cbc"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"e1c741b5-0b5d-4626-a2aa-ccc549854339"]
+}], "History",
+ CellChangeTimes->{{3.8973797686863203`*^9, 3.8973797774787874`*^9}},
+ CellID->551737178,ExpressionUUID->"a59670d1-2181-4794-bb7f-84180182c085"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->339683479,ExpressionUUID->"24ef4b89-6161-45d5-b085-38749a7f0417"],
+
+Cell["Tech Note", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->199021511,ExpressionUUID->"a13b6b14-2b42-4418-a952-f603354611f6"],
+
+Cell["disLocate", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->139504342,ExpressionUUID->"8b067ff8-5280-4d9a-86ca-6219f60eb42c"],
+
+Cell["disLocate`", "Categorization",
+ CellLabel->"Context",
+ CellID->52289471,ExpressionUUID->"93da9ed2-65c7-4b8c-8f00-24c1d8b4bd8f"],
+
+Cell["disLocate/tutorial/SolutionToVoronoiTessellationPractice", \
+"Categorization",
+ CellChangeTimes->{{3.8973797596960983`*^9, 3.897379766904805*^9}},
+ CellLabel->"URI",
+ CellID->20581592,ExpressionUUID->"b6dbc7ad-2c0f-44c3-beb4-53682f6f7cb7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->380543191,ExpressionUUID->"b6f62124-df0e-427b-955b-914fa70aa6fb"],
+
+Cell["disLocate", "Keywords",
+ CellChangeTimes->{{3.897379777995801*^9, 3.897379786493049*^9}},
+ CellID->436990581,ExpressionUUID->"c1fb4f3c-de5b-422d-8baf-13b416cfb9ab"]
+}, Open  ]]
+}, Open  ]]
 },
-Saveable->False,
-ScreenStyleEnvironment->"Working",
-WindowSize->{900., 604.8},
+WindowSize->{1141.2, 568.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowTitle->"Solution to VoronoiTessellation Practice",
-TaggingRules->{
- "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
-  "ExampleCounter" -> 1, 
-  "Openers" -> {
-   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
-  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
-  False, "RootCaptions" -> "", 
-  "Metadata" -> {
-   "built" -> "{2023, 7, 10, 9, 56, 39.6533810}", 
-    "history" -> {"", "", "", ""}, "context" -> "disLocate`", 
-    "keywords" -> {"disLocate"}, "specialkeywords" -> {}, 
-    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
-    "dis Locate Tech Note", "language" -> "en", "paclet" -> "disLocate", 
-    "status" -> "None", "summary" -> " ", "synonyms" -> {}, "tabletags" -> 
-    DocumentationBuild`Make`Private`tabletaggingrules$31850, "title" -> 
-    "Solution to VoronoiTessellation Practice", "titlemodifier" -> "", 
-    "metadescription" -> "", "windowtitle" -> 
-    "Solution to VoronoiTessellation Practice", "type" -> "Tech Note", "uri" -> 
-    "disLocate/tutorial/SolutionToVoronoiTessellationPractice"}},
+TaggingRules-><|"Paclet" -> "disLocate"|>,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
-StyleDefinitions->Notebook[{
-   Cell[
-    StyleData[
-    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
-   Cell[
-    StyleData["Input"], CellContext -> Notebook], 
-   Cell[
-    StyleData["Output"], CellContext -> Notebook], 
-   Cell[
-    StyleData["TutorialMoreAboutSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}], 
-   Cell[
-    StyleData["RelatedTutorialsSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}], 
-   Cell[
-    StyleData["TutorialRelatedLinksSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
-  FrontEndVersion -> "13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
-   StyleDefinitions -> "Default.nb"],
-ExpressionUUID->"210278ce-6a42-4a2c-b235-685c4327ff80"
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TechNotePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"a87b0afa-cb27-471a-8b39-4db926453dbe"
 ]
 (* End of Notebook Content *)
 
@@ -8229,41 +8190,67 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[612, 21, 3527, 82, 70, "AnchorBarGrid",ExpressionUUID->"b0bc6da1-1be7-470b-9e2f-996cf0400d9e",
- CellID->1],
 Cell[CellGroupData[{
-Cell[4164, 107, 138, 1, 70, "TechNoteTitle",ExpressionUUID->"cec2d417-07d3-4228-b440-486409f9083c",
+Cell[580, 22, 130, 1, 114, "Title",ExpressionUUID->"cec2d417-07d3-4228-b440-486409f9083c",
  CellID->9869752],
-Cell[4305, 110, 242, 4, 70, "TechNoteCaption",ExpressionUUID->"0c0e537c-a63a-46d1-a8af-43ad9f5621e8",
+Cell[CellGroupData[{
+Cell[735, 27, 302, 5, 30, "Caption",ExpressionUUID->"0c0e537c-a63a-46d1-a8af-43ad9f5621e8",
  CellID->182486724],
 Cell[CellGroupData[{
-Cell[4572, 118, 1544, 41, 70, "Input",ExpressionUUID->"10aafbfd-8bd4-450c-ae2e-21a9bf3986dc",
+Cell[1062, 36, 1794, 45, 201, "Input",ExpressionUUID->"10aafbfd-8bd4-450c-ae2e-21a9bf3986dc",
  CellID->173819196],
 Cell[CellGroupData[{
-Cell[6141, 163, 164, 2, 70, "Print",ExpressionUUID->"5d3baf9d-6030-4ddb-8437-2b6553e2dde8",
+Cell[2881, 85, 285, 5, 20, "Print",ExpressionUUID->"5d3baf9d-6030-4ddb-8437-2b6553e2dde8",
  CellID->48686258],
-Cell[6308, 167, 71459, 1178, 70, "Print",ExpressionUUID->"4dc4c245-2400-4aa0-b0a0-8afdf6ebf5cb",
+Cell[3169, 92, 71580, 1181, 248, "Print",ExpressionUUID->"4dc4c245-2400-4aa0-b0a0-8afdf6ebf5cb",
  CellID->152755308],
-Cell[77770, 1347, 57241, 955, 70, "Print",ExpressionUUID->"955a7f35-a9ac-4268-9bc8-209450249cd3",
+Cell[74752, 1275, 57360, 958, 257, "Print",ExpressionUUID->"955a7f35-a9ac-4268-9bc8-209450249cd3",
  CellID->109674508],
-Cell[135014, 2304, 86721, 1869, 70, "Print",ExpressionUUID->"4d30ae1b-1ef6-4ca9-aaa6-37b211d5fc20",
+Cell[132115, 2235, 86866, 1872, 247, "Print",ExpressionUUID->"4d30ae1b-1ef6-4ca9-aaa6-37b211d5fc20",
  CellID->97461840],
-Cell[221738, 4175, 165, 2, 70, "Print",ExpressionUUID->"3aeb6d98-6045-418b-a570-163731c4f67b",
+Cell[218984, 4109, 307, 5, 20, "Print",ExpressionUUID->"3aeb6d98-6045-418b-a570-163731c4f67b",
  CellID->322080479],
-Cell[221906, 4179, 71028, 1167, 70, "Print",ExpressionUUID->"00270548-da8f-4bf8-a647-5c89cc197798",
+Cell[219294, 4116, 71171, 1170, 171, "Print",ExpressionUUID->"00270548-da8f-4bf8-a647-5c89cc197798",
  CellID->157342642],
-Cell[292937, 5348, 57011, 949, 70, "Print",ExpressionUUID->"dd78a4e8-2e3b-4237-90df-770cacc5b426",
+Cell[290468, 5288, 57156, 952, 167, "Print",ExpressionUUID->"dd78a4e8-2e3b-4237-90df-770cacc5b426",
  CellID->90457374],
-Cell[349951, 6299, 86062, 1850, 70, "Print",ExpressionUUID->"56565808-f601-421b-937b-ea5a87d960d3",
+Cell[347627, 6242, 86205, 1853, 177, "Print",ExpressionUUID->"56565808-f601-421b-937b-ea5a87d960d3",
  CellID->124394667]
 }, Open  ]]
+}, Open  ]]
 }, Open  ]],
-Cell[436040, 8153, 738, 16, 70, "TutorialMoreAboutSection",ExpressionUUID->"d452b7f4-937d-498e-be2e-bfc58c66fed2"]
+Cell[CellGroupData[{
+Cell[433893, 8102, 191, 2, 74, "TutorialMoreAboutSection",ExpressionUUID->"3aa1c42d-d383-4658-96fb-5b18fd4abf0c",
+ CellID->896534498],
+Cell[434087, 8106, 465, 9, 25, "TutorialMoreAbout",ExpressionUUID->"9f5a05f3-1e71-4e51-b0e6-0f4c863dd272",
+ CellID->523076827]
+}, Open  ]]
 }, Open  ]],
-Cell[436793, 8172, 78, 0, 70, "FooterCell",ExpressionUUID->"bef87379-399a-4021-9464-f8bbfedfa2e0"]
+Cell[CellGroupData[{
+Cell[434601, 8121, 110, 1, 72, "MetadataSection",ExpressionUUID->"4620e0fb-43cb-4e06-b911-8a591823a03a",
+ CellID->925804716],
+Cell[434714, 8124, 541, 12, 26, "History",ExpressionUUID->"a59670d1-2181-4794-bb7f-84180182c085",
+ CellID->551737178],
+Cell[CellGroupData[{
+Cell[435280, 8140, 122, 1, 21, "CategorizationSection",ExpressionUUID->"24ef4b89-6161-45d5-b085-38749a7f0417",
+ CellID->339683479],
+Cell[435405, 8143, 137, 2, 32, "Categorization",ExpressionUUID->"a13b6b14-2b42-4418-a952-f603354611f6",
+ CellID->199021511],
+Cell[435545, 8147, 137, 2, 32, "Categorization",ExpressionUUID->"8b067ff8-5280-4d9a-86ca-6219f60eb42c",
+ CellID->139504342],
+Cell[435685, 8151, 133, 2, 32, "Categorization",ExpressionUUID->"93da9ed2-65c7-4b8c-8f00-24c1d8b4bd8f",
+ CellID->52289471],
+Cell[435821, 8155, 245, 4, 32, "Categorization",ExpressionUUID->"b6dbc7ad-2c0f-44c3-beb4-53682f6f7cb7",
+ CellID->20581592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[436103, 8164, 110, 1, 31, "KeywordsSection",ExpressionUUID->"b6f62124-df0e-427b-955b-914fa70aa6fb",
+ CellID->380543191],
+Cell[436216, 8167, 170, 2, 20, "Keywords",ExpressionUUID->"c1fb4f3c-de5b-422d-8baf-13b416cfb9ab",
+ CellID->436990581]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
