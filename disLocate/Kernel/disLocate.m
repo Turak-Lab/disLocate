@@ -5,7 +5,7 @@ BeginPackage["disLocate`"]
 (* Step 1. - Merge All Cells Toghether *)
 (* Step 2. - Convert To Initialization Cell *)
 (* Step 3. - Save as .M *)
-disLocateVersion:="9.2023-06-29."<>ToString["thesis-M.V9"];
+disLocateVersion:="10.2023-07-13."<>ToString["thesis-M.V10"];
 If[$VersionNumber<10,Needs["ComputationalGeometry`"];];
 
 (* Global Definiations of Colour Schemes *)
@@ -3202,6 +3202,8 @@ t
 ];
 (*,CompilationTarget\[Rule]"C",RuntimeOptions->"Speed"*)(*];*)
 
+
+
 ADOsort=Function[{data2d},
 If[TensorRank[data2d]<= 2 && Length[data2d[[1]]]<3,
  Sort[data2d,Norm[#1]*#1[[2]]/#1[[1]] <Norm[#2]*#2[[2]]/#2[[1]] &],
@@ -3314,7 +3316,13 @@ samples=RandomSample[samples];
 (* Final:  Returns the list of parcels  *)
 listofparcels=Sort[DeleteCases[listofparcels,{}],Length[#1]>Length[#2]&]
 
+
+
+
 ];(* End Function *)
+
+On[Compile::nogen];
+On[CCompilerDriver`CreateLibrary::nocomp];
 
 End[]
 EndPackage[]

@@ -5,7 +5,7 @@ BeginPackage["disLocate`"]
 (* Step 1. - Merge All Cells Toghether *)
 (* Step 2. - Convert To Initialization Cell *)
 (* Step 3. - Save as .M *)
-disLocateVersion:="10.2023-07-07."<>ToString["thesis-M.V10"];
+disLocateVersion:="10.2023-07-13."<>ToString["thesis-M.V10"];
 If[$VersionNumber<10,Needs["ComputationalGeometry`"];];
 
 (* Global Definiations of Colour Schemes *)
@@ -1127,8 +1127,8 @@ coordFromPolygon[fullVert_List,polyl_List] := Table[ fullVert[[z]], {z, polyl}]
 
 
 
-Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True, save ->False,simpleLattice->False};
-SetOptions[PlotPairCorrelationFunction,box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True, save->False,simpleLattice->False];
+Options[PlotPairCorrelationFunction]={box-> {},boundary-> "trunc",lattice-> "",shells-> 4,distance->{} , normalized->False,absgr-> False,stacked->True, xLabel->"Distance (r)" ,names-> {}, boots-> 25, colours->{}, varNames->True, chartQ->True, save ->False,simpleLattice->False, latticeDeviationFactor->1.5};
+SetOptions[PlotPairCorrelationFunction, box-> {} , boundary->"trunc" ,lattice-> "",shells-> 4,distance->{} ,normalized->False ,absgr-> False,stacked->True, xLabel->"Distance (r)"  ,names-> {},boots-> 25, colours->{}, varNames->True, chartQ->True, save->False,simpleLattice->False,latticeDeviationFactor->1.5];
 PlotPairCorrelationFunction[inData2d_, OptionsPattern[]]:=
 Block[{
 xyDataList,xyData,xyLattice,r,dr,xyDataDisplaced,xyLatticeDisplaced,pcfData,pcfLattice,hexBox,
@@ -1244,8 +1244,8 @@ xyDataDisplaced=Table[Select[Hexaticize[xyData,Sqrt@dr],inPolyQ2[boxO,#[[1]],#[[
 
 (* This is a test option, that uses an alternative "simple" method to generate the lattice. *)
 If[simpleLatticeO,
-xyLatticeDisplaced=Table[Select[Hexaticize2[xyLattice,1.5*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];,
-xyLatticeDisplaced=Table[Select[Hexaticize[xyLattice,1.5*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];
+xyLatticeDisplaced=Table[Select[Hexaticize2[xyLattice,OptionValue[latticeDeviationFactor]*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];,
+xyLatticeDisplaced=Table[Select[Hexaticize[xyLattice,OptionValue[latticeDeviationFactor]*Sqrt@dr],inPolyQ2[hexBox,#[[1]],#[[2]] ]==True&],{x,bootsO}];
 ];
 
 
@@ -1912,12 +1912,14 @@ If[TypeBondOrderQ[typeO],
 (* Automatically calculates the (voronoi) bond order *)
 boxO=AutoBoxTransform[data2D];
 
+(*Look at the DevNotes for a full explanation of how the output of this looks like.
+But the first list in this output, is the regular VoronoiCells output with lists of voronoicells. *)
 vor=VoronoiCells[data2D,box->boxO,edge-> boundaryO, full->True];
 
 
 polyAreaColourTable=BondOrderParameter[data2D, symmetryO,box-> boxO,passVor->vor,edge-> boundaryO];(*/BOPexp[symmetryO];*)
 
-
+(* This  *)
 vor=vor[[1]];
 
 If[Length[vor]!= Length@polyAreaColourTable, Print["For some reason the number of colours generated was not the same as the number of Voronoi cells. This should never happen?"]];
@@ -1928,8 +1930,9 @@ voronoiColour={};
 
 If[OptionValue[colourBinned]==True,
 
+(* Generate the histogram binning to help with our colouring. *)
 colourBins = binGen[OptionValue[binsize]];(* HistogramList[polyAreaColourTable, {0.0,1.1,OptionValue[binsize]}][[1]] ;*)
-
+(* Assign colours based on our bond order parameters.*)
 voronoiColour = vorColourer[ #, colourGrad->OptionValue[colourGrad],binDstr->colourBins] &/@polyAreaColourTable;
 
 
@@ -2193,7 +2196,7 @@ If[debug===True,Print["Voronoi calculation was skipped."];];
 ,
 {vor,fullPoints,delaunayNearestNeighbours,commonVertices}=VoronoiCells[unBoundedData2D,box->imagebox,edge-> edgeO,full->True,fast->fastO];
 ];
-
+ 
 
 If[ToUpperCase[edgeO]==="NOEDGE",particleIndicies= Pick[Range[Length[fullPoints[[1]]]],fullPoints[[2]]];
 particlePickList=fullPoints[[2]];
@@ -3199,6 +3202,8 @@ t
 ];
 (*,CompilationTarget\[Rule]"C",RuntimeOptions->"Speed"*)(*];*)
 
+
+
 ADOsort=Function[{data2d},
 If[TensorRank[data2d]<= 2 && Length[data2d[[1]]]<3,
  Sort[data2d,Norm[#1]*#1[[2]]/#1[[1]] <Norm[#2]*#2[[2]]/#2[[1]] &],
@@ -3311,7 +3316,13 @@ samples=RandomSample[samples];
 (* Final:  Returns the list of parcels  *)
 listofparcels=Sort[DeleteCases[listofparcels,{}],Length[#1]>Length[#2]&]
 
+
+
+
 ];(* End Function *)
+
+On[Compile::nogen];
+On[CCompilerDriver`CreateLibrary::nocomp];
 
 End[]
 EndPackage[]
