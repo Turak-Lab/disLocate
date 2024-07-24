@@ -27,7 +27,7 @@ Needs["disLocate`"]
 ## Using disLocate 
 - With disLocate installed as a paclet, you can access all of its content after running ```Needs["disLocate`"]```
 - If you have not used Mathematica before, you can read our the 0.Basics of Mathematica file in /Tutorials. 
-- Once installed, you can access the documentation files in the Wolfram Documentation centre, by searching "disLocate".
+- Once installed, you can access the documentation files in the documentation tab inside the notebook.
 - The ``/Example`` folder contains a sample analysis of two datasets. Simply download the entire folder and open the "Analysis.nb" file.
 	- You can see the expected input data csv file format in the ```/Example``` folder. 
 
